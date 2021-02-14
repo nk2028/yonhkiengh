@@ -1,0 +1,78 @@
+/* tooltip */
+
+.tippy-box {
+	writing-mode: vertical-rl;
+}
+
+/* table general */
+
+table {
+	writing-mode: vertical-rl;
+}
+
+/* table border */
+
+table {
+	border-collapse: collapse;
+}
+
+th, td {
+	min-height: 1em;
+	min-width: 1em;
+	padding: 4px;
+}
+
+tr,
+tr td:nth-of-type(1) {
+	border-top: 1px solid;
+}
+
+tr:nth-child(1) {
+	border-right: 1px solid;
+}
+
+tr td:nth-of-type(4),
+tr td:nth-of-type(8),
+tr td:nth-of-type(12),
+tr td:nth-of-type(16) {
+	border-bottom: 1px solid;
+}
+
+tr:nth-child(4),
+tr:nth-child(8),
+tr:nth-child(12),
+tr:nth-child(17),
+tr:nth-child(21),
+tr:nth-child(23) {
+	border-left: 1px solid;
+}
+
+/* table header */
+
+th {
+	text-align: right;
+}
+
+tr th[rowspan] {
+	max-height: 1.25em;
+	font-size: larger;
+}
+
+tr th:last-of-type {
+	white-space: nowrap;
+}
+
+tr:nth-child(22) th:first-child {
+	line-height: 0.85;
+}
+
+/* table body */
+
+td:empty::before {
+	color: #777;
+	content: "〇";
+}
+
+td.empty-position:empty::before {
+	color: #eee;
+}

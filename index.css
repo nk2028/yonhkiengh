@@ -14,6 +14,10 @@ a {
 	text-decoration: none;
 }
 
+.link-disabled a {
+	pointer-events: none;
+}
+
 /* tooltip */
 
 .tippy-box {

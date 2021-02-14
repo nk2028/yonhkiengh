@@ -1,3 +1,11 @@
+/* Enable/disable 連結功能 */
+
+function handleCheckBoxChange() {
+  document.getElementById('checkBox').checked ? document.body.classList.remove('link-disabled') : document.body.classList.add('link-disabled');
+}
+
+handleCheckBoxChange();
+
 /* Add table of contents */
 
 ((() => {

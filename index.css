@@ -1,3 +1,19 @@
+/* general */
+
+:lang(zh) {
+	font-family: "Source Han Serif K", "Noto Serif CJK KR", "Source Han Serif SC", "Noto Serif CJK SC", "Source Han Serif", "Noto Serif CJK JP", "Source Han Serif TC", "Noto Serif CJK TC", "Noto Serif KR", "Noto Serif SC", "Noto Serif TC", serif, HanaMin, serif;
+	font-language-override: "KOR";
+}
+
+body {
+	margin: 0 1em;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 /* tooltip */
 
 .tippy-box {
@@ -6,8 +22,16 @@
 
 /* table general */
 
+.table-wrapper {
+	overflow-x: auto;
+}
+
 table {
 	writing-mode: vertical-rl;
+}
+
+td {
+	user-select: none;
 }
 
 /* table border */

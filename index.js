@@ -43,9 +43,9 @@
 /* Convert 音韻地位 to 代表字 and add tooltip */
 
 [...document.getElementsByTagName('td')].forEach((td) => {
-  const 描述 = td.textContent;
+  const 描述 = td.textContent.trim();
 
-  if (描述.length === 0 || 描述.indexOf(' ') !== -1) { // empty 音韻地位
+  if (描述.length === 0) { // empty 音韻地位
     td.innerText = '';
     td.classList.add('empty-position')
   } else {
@@ -57,7 +57,17 @@
       td.innerText = '';
       提示 = '無 字';
     } else {
-      td.innerText = 代表字;
+      const 小韻號 = sieuxyonh[音韻地位.編碼];
+      if (小韻號) {
+        const a = document.createElement('a');
+        a.innerText = 代表字;
+        a.href = `https://ytenx.org/kyonh/sieux/${小韻號}/`;
+        a.target = '_blank';
+        td.innerText = '';
+        td.appendChild(a);
+      } else {
+        td.innerText = 代表字;
+      }
       const 反切 = 音韻地位.反切(代表字);
       提示 = [...(反切 == null ? '' : 反切 + '切')].join(' ');
     }

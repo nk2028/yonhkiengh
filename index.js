@@ -36,7 +36,7 @@ handleCheckBox2Change();
 
 /* Copy 平 to 上去入 */
 
-[...document.querySelectorAll('table:not(.no-generate) tbody tr')].forEach((tr) => {
+document.querySelectorAll('table:not(.no-generate) tbody tr').forEach((tr) => {
   const fragment = document.createDocumentFragment();
   for (const 聲調 of '上去入') {
     [...tr.getElementsByTagName('td')].forEach((td) => {
@@ -50,7 +50,7 @@ handleCheckBox2Change();
 
 /* Add spaces to title */
 
-[...document.querySelectorAll('tbody tr th:last-of-type')].forEach((th) => {
+[...document.querySelectorAll('tbody tr:not(:last-child) th:last-of-type')].forEach((th) => {
   if (th.textContent.length > 1) {
     th.innerText = [...th.textContent].join(' ');
   }
@@ -58,7 +58,7 @@ handleCheckBox2Change();
 
 /* Convert 音韻地位 to 代表字 and add tooltip */
 
-[...document.querySelectorAll('tbody td')].forEach((td) => {
+document.querySelectorAll('tbody td').forEach((td) => {
   const 描述 = td.textContent.trim();
 
   if (描述.length === 0) { // empty 音韻地位

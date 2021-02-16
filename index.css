@@ -6,7 +6,13 @@
 }
 
 body {
-	margin: 0 1em;
+	margin: 0 auto;
+	max-width: 52em;
+	padding: 0 1em;
+}
+
+#TOC {
+	list-style-type: cjk-ideographic;
 }
 
 a {
@@ -14,8 +20,12 @@ a {
 	text-decoration: none;
 }
 
-.link-disabled a {
+body.link-disabled table a {
 	pointer-events: none;
+}
+
+body.user-unselectable {
+	user-select: none;
 }
 
 /* tooltip */
@@ -27,15 +37,12 @@ a {
 /* table general */
 
 .table-wrapper {
+	margin: 1em 0;
 	overflow-x: auto;
 }
 
 table {
 	writing-mode: vertical-rl;
-}
-
-td {
-	user-select: none;
 }
 
 /* table border */
@@ -50,57 +57,70 @@ th, td {
 	padding: 4px;
 }
 
-tr,
-tr td:nth-of-type(1) {
+thead tr,
+tbody tr,
+tbody tr td:nth-of-type(1) {
 	border-top: 1px solid;
 }
 
-tr:nth-child(1) {
+thead tr,
+tbody tr:nth-child(1) {
 	border-right: 1px solid;
 }
 
-tr td:nth-of-type(4),
-tr td:nth-of-type(8),
-tr td:nth-of-type(12),
-tr td:nth-of-type(16) {
+thead tr,
+tbody tr td:nth-of-type(4),
+tbody tr td:nth-of-type(8),
+tbody tr td:nth-of-type(12),
+tbody tr td:nth-of-type(16),
+tbody tr:last-child th {
 	border-bottom: 1px solid;
 }
 
-tr:nth-child(4),
-tr:nth-child(8),
-tr:nth-child(12),
-tr:nth-child(17),
-tr:nth-child(21),
-tr:nth-child(23) {
+tbody tr:nth-child(4),
+tbody tr:nth-child(8),
+tbody tr:nth-child(12),
+tbody tr:nth-child(17),
+tbody tr:nth-child(21),
+tbody tr:nth-child(23),
+tbody tr th[rowspan],
+tbody tr:last-child th {
 	border-left: 1px solid;
 }
 
 /* table header */
 
-th {
+thead th:first-child {
+	font-size: 1.5em;
+	letter-spacing: 0.25em;
+	text-align: left;
+}
+
+thead th:nth-child(2) {
+	letter-spacing: 0.25em;
 	text-align: right;
 }
 
-tr th[rowspan] {
+tbody th {
+	text-align: right;
+}
+
+tbody tr th[rowspan] {
 	max-height: 1.25em;
 	font-size: larger;
 }
 
-tr th:last-of-type {
+tbody tr th:last-of-type {
 	white-space: nowrap;
 }
 
-tr:nth-child(22) th:first-child {
+tbody tr:nth-child(22) th[rowspan] {
 	line-height: 0.85;
 }
 
 /* table body */
 
-td:empty::before {
-	color: #777;
+tbody td:empty:not(.empty-position)::before {
+	color: #aaa;
 	content: "〇";
-}
-
-td.empty-position:empty::before {
-	color: #eee;
 }

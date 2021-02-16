@@ -11,10 +11,6 @@ body {
 	padding: 0 1em;
 }
 
-#TOC {
-	list-style-type: cjk-ideographic;
-}
-
 a {
 	color: inherit;
 	text-decoration: none;
@@ -127,4 +123,5 @@ tbody td:empty:not(.empty-position)::before {
 
 tbody tr:last-child th {
 	font-size: larger;
+	text-align: center;
 }

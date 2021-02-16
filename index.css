@@ -124,3 +124,7 @@ tbody td:empty:not(.empty-position)::before {
 	color: #aaa;
 	content: "〇";
 }
+
+tbody tr:last-child th {
+	font-size: larger;
+}

@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Noto+Serif+SC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hanamin@latest/HanaMin.min.css">
 <!-- index.js -->
+<script src="yonh.js"></script>
 <script src="sieuxyonh.js"></script>
 <script src="index.js" defer></script>
 <link rel="stylesheet" href="index.css"/>
@@ -29,469 +30,1196 @@
 <p><label><input type="checkbox" id="checkBox2" onchange="handleCheckBox2Change()"/> 文字可選擇</label></p>
 <p><a href="https://github.com/nk2028/yonhkiengh" target="_blank">檢視原始碼</a></p>
 
-<div class="table-wrapper"><table class="no-generate">
-<thead><th colspan="18">內轉第一開</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td>幫一東平</td><td>        </td><td>幫三東平</td><td>        </td><td>幫一東上</td><td>        </td><td>幫三東上</td><td>        </td><td>幫一東去</td><td>        </td><td>幫三東去</td><td>        </td><td>幫一東入</td><td>        </td><td>幫三東入</td><td>        </td></tr>
-<tr><th>次清</th>                           <td>滂一東平</td><td>        </td><td>滂三東平</td><td>        </td><td>滂一東上</td><td>        </td><td>滂三東上</td><td>        </td><td>滂一東去</td><td>        </td><td>滂三東去</td><td>        </td><td>滂一東入</td><td>        </td><td>滂三東入</td><td>        </td></tr>
-<tr><th>濁</th>                             <td>並一東平</td><td>        </td><td>並三東平</td><td>        </td><td>並一東上</td><td>        </td><td>並三東上</td><td>        </td><td>並一東去</td><td>        </td><td>並三東去</td><td>        </td><td>並一東入</td><td>        </td><td>並三東入</td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>明一東平</td><td>        </td><td>明三東平</td><td>        </td><td>明一東上</td><td>        </td><td>明三東上</td><td>        </td><td>明一東去</td><td>        </td><td>明三東去</td><td>        </td><td>明一東入</td><td>        </td><td>明三東入</td><td>        </td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td>端一東平</td><td>        </td><td>知三東平</td><td>        </td><td>端一東上</td><td>        </td><td>知三東上</td><td>        </td><td>端一東去</td><td>        </td><td>知三東去</td><td>        </td><td>端一東入</td><td>        </td><td>知三東入</td><td>        </td></tr>
-<tr><th>次清</th>                           <td>透一東平</td><td>        </td><td>徹三東平</td><td>        </td><td>透一東上</td><td>        </td><td>徹三東上</td><td>        </td><td>透一東去</td><td>        </td><td>徹三東去</td><td>        </td><td>透一東入</td><td>        </td><td>徹三東入</td><td>        </td></tr>
-<tr><th>濁</th>                             <td>定一東平</td><td>        </td><td>澄三東平</td><td>        </td><td>定一東上</td><td>        </td><td>澄三東上</td><td>        </td><td>定一東去</td><td>        </td><td>澄三東去</td><td>        </td><td>定一東入</td><td>        </td><td>澄三東入</td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>泥一東平</td><td>        </td><td>孃三東平</td><td>        </td><td>泥一東上</td><td>        </td><td>孃三東上</td><td>        </td><td>泥一東去</td><td>        </td><td>孃三東去</td><td>        </td><td>泥一東入</td><td>        </td><td>孃三東入</td><td>        </td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td>見一東平</td><td>        </td><td>見三東平</td><td>        </td><td>見一東上</td><td>        </td><td>見三東上</td><td>        </td><td>見一東去</td><td>        </td><td>見三東去</td><td>        </td><td>見一東入</td><td>        </td><td>見三東入</td><td>        </td></tr>
-<tr><th>次清</th>                           <td>溪一東平</td><td>        </td><td>溪三東平</td><td>        </td><td>溪一東上</td><td>        </td><td>溪三東上</td><td>        </td><td>溪一東去</td><td>        </td><td>溪三東去</td><td>        </td><td>溪一東入</td><td>        </td><td>溪三東入</td><td>        </td></tr>
-<tr><th>濁</th>                             <td>        </td><td>        </td><td>羣三東平</td><td>        </td><td>        </td><td>        </td><td>羣三東上</td><td>        </td><td>        </td><td>        </td><td>羣三東去</td><td>        </td><td>        </td><td>        </td><td>羣三東入</td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>疑一東平</td><td>        </td><td>疑三東平</td><td>        </td><td>疑一東上</td><td>        </td><td>疑三東上</td><td>        </td><td>疑一東去</td><td>        </td><td>疑三東去</td><td>        </td><td>疑一東入</td><td>        </td><td>疑三東入</td><td>        </td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td>精一東平</td><td>莊三東平</td><td>章三東平</td><td>精三東平</td><td>精一東上</td><td>莊三東上</td><td>章三東上</td><td>精三東上</td><td>精一東去</td><td>莊三東去</td><td>章三東去</td><td>精三東去</td><td>精一東入</td><td>莊三東入</td><td>章三東入</td><td>精三東入</td></tr>
-<tr><th>次清</th>                           <td>清一東平</td><td>初三東平</td><td>昌三東平</td><td>清三東平</td><td>清一東上</td><td>初三東上</td><td>昌三東上</td><td>清三東上</td><td>清一東去</td><td>初三東去</td><td>昌三東去</td><td>清三東去</td><td>清一東入</td><td>初三東入</td><td>昌三東入</td><td>清三東入</td></tr>
-<tr><th>濁</th>                             <td>從一東平</td><td>崇三東平</td><td>船三東平</td><td>從三東平</td><td>從一東上</td><td>崇三東上</td><td>船三東上</td><td>從三東上</td><td>從一東去</td><td>崇三東去</td><td>船三東去</td><td>從三東去</td><td>從一東入</td><td>崇三東入</td><td>船三東入</td><td>從三東入</td></tr>
-<tr><th>清</th>                             <td>心一東平</td><td>生三東平</td><td>書三東平</td><td>心三東平</td><td>心一東上</td><td>生三東上</td><td>書三東上</td><td>心三東上</td><td>心一東去</td><td>生三東去</td><td>書三東去</td><td>心三東去</td><td>心一東入</td><td>生三東入</td><td>書三東入</td><td>心三東入</td></tr>
-<tr><th>濁</th>                             <td>        </td><td>俟三東平</td><td>常三東平</td><td>邪三東平</td><td>        </td><td>俟三東上</td><td>常三東上</td><td>邪三東上</td><td>        </td><td>俟三東去</td><td>常三東去</td><td>邪三東去</td><td>        </td><td>俟三東入</td><td>常三東入</td><td>邪三東入</td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td>影一東平</td><td>        </td><td>影三東平</td><td>        </td><td>影一東上</td><td>        </td><td>影三東上</td><td>        </td><td>影一東去</td><td>        </td><td>影三東去</td><td>        </td><td>影一東入</td><td>        </td><td>影三東入</td><td>        </td></tr>
-<tr><th>清</th>                             <td>曉一東平</td><td>        </td><td>曉三東平</td><td>        </td><td>曉一東上</td><td>        </td><td>曉三東上</td><td>        </td><td>曉一東去</td><td>        </td><td>曉三東去</td><td>        </td><td>曉一東入</td><td>        </td><td>曉三東入</td><td>        </td></tr>
-<tr><th>濁</th>                             <td>匣一東平</td><td>        </td><td>        </td><td>        </td><td>匣一東上</td><td>        </td><td>        </td><td>        </td><td>匣一東去</td><td>        </td><td>        </td><td>        </td><td>匣一東入</td><td>        </td><td>        </td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>        </td><td>        </td><td>云三東平</td><td>以三東平</td><td>        </td><td>        </td><td>云三東上</td><td>以三東上</td><td>        </td><td>        </td><td>云三東去</td><td>以三東去</td><td>        </td><td>        </td><td>云三東入</td><td>以三東入</td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td>來一東平</td><td>        </td><td>來三東平</td><td>        </td><td>來一東上</td><td>        </td><td>來三東上</td><td>        </td><td>來一東去</td><td>        </td><td>來三東去</td><td>        </td><td>來一東入</td><td>        </td><td>來三東入</td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>        </td><td>        </td><td>日三東平</td><td>        </td><td>        </td><td>        </td><td>日三東上</td><td>        </td><td>        </td><td>        </td><td>日三東去</td><td>        </td><td>        </td><td>        </td><td>日三東入</td><td>        </td></tr>
-<tr><th colspan="2"></th><th colspan="4">東</th><th colspan="4">董</th><th colspan="4">送</th><th colspan="4">屋</th></tr>
-</tbody></table></div>
+<h2>內轉第一開：東</h2>
+<template class="template-data">[
+["東","一","平"],
+["東","假二","平"],
+["東","三","平"],
+["東","假四","平"],
+["東","一","上"],
+["東","假二","上"],
+["東","三","上"],
+["東","假四","上"],
+["東","一","去"],
+["東","假二","去"],
+["東","三","去"],
+["東","假四","去"],
+["東","一","入"],
+["東","假二","入"],
+["東","三","入"],
+["東","假四","入"]
+]</template>
 
-<div class="table-wrapper"><table class="no-generate">
-<thead><th colspan="18">內轉第二開合</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td>幫一冬平</td><td>        </td><td>幫三鍾平</td><td>        </td><td>幫一冬上</td><td>        </td><td>幫三鍾上</td><td>        </td><td>幫一冬去</td><td>        </td><td>幫三鍾去</td><td>        </td><td>幫一冬入</td><td>        </td><td>幫三鍾入</td><td>        </td></tr>
-<tr><th>次清</th>                           <td>滂一冬平</td><td>        </td><td>滂三鍾平</td><td>        </td><td>滂一冬上</td><td>        </td><td>滂三鍾上</td><td>        </td><td>滂一冬去</td><td>        </td><td>滂三鍾去</td><td>        </td><td>滂一冬入</td><td>        </td><td>滂三鍾入</td><td>        </td></tr>
-<tr><th>濁</th>                             <td>並一冬平</td><td>        </td><td>並三鍾平</td><td>        </td><td>並一冬上</td><td>        </td><td>並三鍾上</td><td>        </td><td>並一冬去</td><td>        </td><td>並三鍾去</td><td>        </td><td>並一冬入</td><td>        </td><td>並三鍾入</td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>明一冬平</td><td>        </td><td>明三鍾平</td><td>        </td><td>明一冬上</td><td>        </td><td>明三鍾上</td><td>        </td><td>明一冬去</td><td>        </td><td>明三鍾去</td><td>        </td><td>明一冬入</td><td>        </td><td>明三鍾入</td><td>        </td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td>端一冬平</td><td>        </td><td>知三鍾平</td><td>        </td><td>端一冬上</td><td>        </td><td>知三鍾上</td><td>        </td><td>端一冬去</td><td>        </td><td>知三鍾去</td><td>        </td><td>端一冬入</td><td>        </td><td>知三鍾入</td><td>        </td></tr>
-<tr><th>次清</th>                           <td>透一冬平</td><td>        </td><td>徹三鍾平</td><td>        </td><td>透一冬上</td><td>        </td><td>徹三鍾上</td><td>        </td><td>透一冬去</td><td>        </td><td>徹三鍾去</td><td>        </td><td>透一冬入</td><td>        </td><td>徹三鍾入</td><td>        </td></tr>
-<tr><th>濁</th>                             <td>定一冬平</td><td>        </td><td>澄三鍾平</td><td>        </td><td>定一冬上</td><td>        </td><td>澄三鍾上</td><td>        </td><td>定一冬去</td><td>        </td><td>澄三鍾去</td><td>        </td><td>定一冬入</td><td>        </td><td>澄三鍾入</td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>泥一冬平</td><td>        </td><td>孃三鍾平</td><td>        </td><td>泥一冬上</td><td>        </td><td>孃三鍾上</td><td>        </td><td>泥一冬去</td><td>        </td><td>孃三鍾去</td><td>        </td><td>泥一冬入</td><td>        </td><td>孃三鍾入</td><td>        </td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td>見一冬平</td><td>        </td><td>見三鍾平</td><td>        </td><td>見一冬上</td><td>        </td><td>見三鍾上</td><td>        </td><td>見一冬去</td><td>        </td><td>見三鍾去</td><td>        </td><td>見一冬入</td><td>        </td><td>見三鍾入</td><td>        </td></tr>
-<tr><th>次清</th>                           <td>溪一冬平</td><td>        </td><td>溪三鍾平</td><td>        </td><td>溪一冬上</td><td>        </td><td>溪三鍾上</td><td>        </td><td>溪一冬去</td><td>        </td><td>溪三鍾去</td><td>        </td><td>溪一冬入</td><td>        </td><td>溪三鍾入</td><td>        </td></tr>
-<tr><th>濁</th>                             <td>        </td><td>        </td><td>羣三鍾平</td><td>        </td><td>        </td><td>        </td><td>羣三鍾上</td><td>        </td><td>        </td><td>        </td><td>羣三鍾去</td><td>        </td><td>        </td><td>        </td><td>羣三鍾入</td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>疑一冬平</td><td>        </td><td>疑三鍾平</td><td>        </td><td>疑一冬上</td><td>        </td><td>疑三鍾上</td><td>        </td><td>疑一冬去</td><td>        </td><td>疑三鍾去</td><td>        </td><td>疑一冬入</td><td>        </td><td>疑三鍾入</td><td>        </td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td>精一冬平</td><td>莊三鍾平</td><td>章三鍾平</td><td>精三鍾平</td><td>精一冬上</td><td>莊三鍾上</td><td>章三鍾上</td><td>精三鍾上</td><td>精一冬去</td><td>莊三鍾去</td><td>章三鍾去</td><td>精三鍾去</td><td>精一冬入</td><td>莊三鍾入</td><td>章三鍾入</td><td>精三鍾入</td></tr>
-<tr><th>次清</th>                           <td>清一冬平</td><td>初三鍾平</td><td>昌三鍾平</td><td>清三鍾平</td><td>清一冬上</td><td>初三鍾上</td><td>昌三鍾上</td><td>清三鍾上</td><td>清一冬去</td><td>初三鍾去</td><td>昌三鍾去</td><td>清三鍾去</td><td>清一冬入</td><td>初三鍾入</td><td>昌三鍾入</td><td>清三鍾入</td></tr>
-<tr><th>濁</th>                             <td>從一冬平</td><td>崇三鍾平</td><td>船三鍾平</td><td>從三鍾平</td><td>從一冬上</td><td>崇三鍾上</td><td>船三鍾上</td><td>從三鍾上</td><td>從一冬去</td><td>崇三鍾去</td><td>船三鍾去</td><td>從三鍾去</td><td>從一冬入</td><td>崇三鍾入</td><td>船三鍾入</td><td>從三鍾入</td></tr>
-<tr><th>清</th>                             <td>心一冬平</td><td>生三鍾平</td><td>書三鍾平</td><td>心三鍾平</td><td>心一冬上</td><td>生三鍾上</td><td>書三鍾上</td><td>心三鍾上</td><td>心一冬去</td><td>生三鍾去</td><td>書三鍾去</td><td>心三鍾去</td><td>心一冬入</td><td>生三鍾入</td><td>書三鍾入</td><td>心三鍾入</td></tr>
-<tr><th>濁</th>                             <td>        </td><td>俟三鍾平</td><td>常三鍾平</td><td>邪三鍾平</td><td>        </td><td>俟三鍾上</td><td>常三鍾上</td><td>邪三鍾上</td><td>        </td><td>俟三鍾去</td><td>常三鍾去</td><td>邪三鍾去</td><td>        </td><td>俟三鍾入</td><td>常三鍾入</td><td>邪三鍾入</td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td>影一冬平</td><td>        </td><td>影三鍾平</td><td>        </td><td>影一冬上</td><td>        </td><td>影三鍾上</td><td>        </td><td>影一冬去</td><td>        </td><td>影三鍾去</td><td>        </td><td>影一冬入</td><td>        </td><td>影三鍾入</td><td>        </td></tr>
-<tr><th>清</th>                             <td>曉一冬平</td><td>        </td><td>曉三鍾平</td><td>        </td><td>曉一冬上</td><td>        </td><td>曉三鍾上</td><td>        </td><td>曉一冬去</td><td>        </td><td>曉三鍾去</td><td>        </td><td>曉一冬入</td><td>        </td><td>曉三鍾入</td><td>        </td></tr>
-<tr><th>濁</th>                             <td>匣一冬平</td><td>        </td><td>        </td><td>        </td><td>匣一冬上</td><td>        </td><td>        </td><td>        </td><td>匣一冬去</td><td>        </td><td>        </td><td>        </td><td>匣一冬入</td><td>        </td><td>        </td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>        </td><td>        </td><td>云三鍾平</td><td>以三鍾平</td><td>        </td><td>        </td><td>云三鍾上</td><td>以三鍾上</td><td>        </td><td>        </td><td>云三鍾去</td><td>以三鍾去</td><td>        </td><td>        </td><td>云三鍾入</td><td>以三鍾入</td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td>來一冬平</td><td>        </td><td>來三鍾平</td><td>        </td><td>來一冬上</td><td>        </td><td>來三鍾上</td><td>        </td><td>來一冬去</td><td>        </td><td>來三鍾去</td><td>        </td><td>來一冬入</td><td>        </td><td>來三鍾入</td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>        </td><td>        </td><td>日三鍾平</td><td>        </td><td>        </td><td>        </td><td>日三鍾上</td><td>        </td><td>        </td><td>        </td><td>日三鍾去</td><td>        </td><td>        </td><td>        </td><td>日三鍾入</td><td>        </td></tr>
-<tr><th colspan="2"></th><th colspan="4">冬鍾</th><th colspan="4">腫</th><th colspan="4">宋用</th><th colspan="4">沃燭</th></tr>
-</tbody></table></div>
+<h2>內轉第二開合：冬鍾</h2>
+<template class="template-data">[
+["冬","一","平"],
+["鍾","假二","平"],
+["鍾","三","平"],
+["鍾","假四","平"],
+["冬","一","上"],
+["鍾","假二","上"],
+["鍾","三","上"],
+["鍾","假四","上"],
+["冬","一","去"],
+["鍾","假二","去"],
+["鍾","三","去"],
+["鍾","假四","去"],
+["冬","一","入"],
+["鍾","假二","入"],
+["鍾","三","入"],
+["鍾","假四","入"]
+]</template>
 
-<div class="table-wrapper"><table class="no-generate">
-<thead><th colspan="18">外轉第三開合</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td></td><td>幫二江平</td><td></td><td></td><td></td><td>幫二江上</td><td></td><td></td><td></td><td>幫二江去</td><td></td><td></td><td></td><td>幫二江入</td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>滂二江平</td><td></td><td></td><td></td><td>滂二江上</td><td></td><td></td><td></td><td>滂二江去</td><td></td><td></td><td></td><td>滂二江入</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>並二江平</td><td></td><td></td><td></td><td>並二江上</td><td></td><td></td><td></td><td>並二江去</td><td></td><td></td><td></td><td>並二江入</td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>明二江平</td><td></td><td></td><td></td><td>明二江上</td><td></td><td></td><td></td><td>明二江去</td><td></td><td></td><td></td><td>明二江入</td><td></td><td></td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td></td><td>知二江平</td><td></td><td></td><td></td><td>知二江上</td><td></td><td></td><td></td><td>知二江去</td><td></td><td></td><td></td><td>知二江入</td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>徹二江平</td><td></td><td></td><td></td><td>徹二江上</td><td></td><td></td><td></td><td>徹二江去</td><td></td><td></td><td></td><td>徹二江入</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>澄二江平</td><td></td><td></td><td></td><td>澄二江上</td><td></td><td></td><td></td><td>澄二江去</td><td></td><td></td><td></td><td>澄二江入</td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>孃二江平</td><td></td><td></td><td></td><td>孃二江上</td><td></td><td></td><td></td><td>孃二江去</td><td></td><td></td><td></td><td>孃二江入</td><td></td><td></td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td></td><td>見二江平</td><td></td><td></td><td></td><td>見二江上</td><td></td><td></td><td></td><td>見二江去</td><td></td><td></td><td></td><td>見二江入</td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>溪二江平</td><td></td><td></td><td></td><td>溪二江上</td><td></td><td></td><td></td><td>溪二江去</td><td></td><td></td><td></td><td>溪二江入</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>        </td><td></td><td></td><td></td><td>        </td><td></td><td></td><td></td><td>        </td><td></td><td></td><td></td><td>        </td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>疑二江平</td><td></td><td></td><td></td><td>疑二江上</td><td></td><td></td><td></td><td>疑二江去</td><td></td><td></td><td></td><td>疑二江入</td><td></td><td></td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td></td><td>莊二江平</td><td></td><td></td><td></td><td>莊二江上</td><td></td><td></td><td></td><td>莊二江去</td><td></td><td></td><td></td><td>莊二江入</td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>初二江平</td><td></td><td></td><td></td><td>初二江上</td><td></td><td></td><td></td><td>初二江去</td><td></td><td></td><td></td><td>初二江入</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>崇二江平</td><td></td><td></td><td></td><td>崇二江上</td><td></td><td></td><td></td><td>崇二江去</td><td></td><td></td><td></td><td>崇二江入</td><td></td><td></td></tr>
-<tr><th>清</th>                             <td></td><td>生二江平</td><td></td><td></td><td></td><td>生二江上</td><td></td><td></td><td></td><td>生二江去</td><td></td><td></td><td></td><td>生二江入</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>        </td><td></td><td></td><td></td><td>        </td><td></td><td></td><td></td><td>        </td><td></td><td></td><td></td><td>        </td><td></td><td></td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td></td><td>影二江平</td><td></td><td></td><td></td><td>影二江上</td><td></td><td></td><td></td><td>影二江去</td><td></td><td></td><td></td><td>影二江入</td><td></td><td></td></tr>
-<tr><th>清</th>                             <td></td><td>曉二江平</td><td></td><td></td><td></td><td>曉二江上</td><td></td><td></td><td></td><td>曉二江去</td><td></td><td></td><td></td><td>曉二江入</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>匣二江平</td><td></td><td></td><td></td><td>匣二江上</td><td></td><td></td><td></td><td>匣二江去</td><td></td><td></td><td></td><td>匣二江入</td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>        </td><td></td><td></td><td></td><td>        </td><td></td><td></td><td></td><td>        </td><td></td><td></td><td></td><td>        </td><td></td><td></td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td></td><td>來二江平</td><td></td><td></td><td></td><td>來二江上</td><td></td><td></td><td></td><td>來二江去</td><td></td><td></td><td></td><td>來二江入</td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>        </td><td></td><td></td><td></td><td>        </td><td></td><td></td><td></td><td>        </td><td></td><td></td><td></td><td>        </td><td></td><td></td></tr>
-<tr><th colspan="2"></th><th colspan="4">江</th><th colspan="4">講</th><th colspan="4">絳</th><th colspan="4">覺</th></tr>
-</tbody></table></div>
+<h2>外轉第三開合：江</h2>
+<template class="template-data">[
+null,
+["江","二","平"],
+null,
+null,
+null,
+["江","二","上"],
+null,
+null,
+null,
+["江","二","去"],
+null,
+null,
+null,
+["江","二","入"],
+null,
+null
+]</template>
 
-<div class="table-wrapper"><table class="no-generate">
-<thead><th colspan="18">內轉第四開合</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td></td><td>          </td><td>幫三B支平  </td><td>幫三A支平  </td><td></td><td>          </td><td>幫三B支上  </td><td>幫三A支上  </td><td></td><td>          </td><td>幫三B支去  </td><td>幫三A支去  </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>滂三B支平  </td><td>滂三A支平  </td><td></td><td>          </td><td>滂三B支上  </td><td>滂三A支上  </td><td></td><td>          </td><td>滂三B支去  </td><td>滂三A支去  </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>並三B支平  </td><td>並三A支平  </td><td></td><td>          </td><td>並三B支上  </td><td>並三A支上  </td><td></td><td>          </td><td>並三B支去  </td><td>並三A支去  </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>明三B支平  </td><td>明三A支平  </td><td></td><td>          </td><td>明三B支上  </td><td>明三A支上  </td><td></td><td>          </td><td>明三B支去  </td><td>明三A支去  </td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td></td><td>          </td><td>知開三支平 </td><td>           </td><td></td><td>          </td><td>知開三支上 </td><td>           </td><td></td><td>          </td><td>知開三支去 </td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>徹開三支平 </td><td>           </td><td></td><td>          </td><td>徹開三支上 </td><td>           </td><td></td><td>          </td><td>徹開三支去 </td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>澄開三支平 </td><td>           </td><td></td><td>          </td><td>澄開三支上 </td><td>           </td><td></td><td>          </td><td>澄開三支去 </td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>孃開三支平 </td><td>           </td><td></td><td>          </td><td>孃開三支上 </td><td>           </td><td></td><td>          </td><td>孃開三支去 </td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td></td><td>          </td><td>見開三B支平</td><td>見開三A支平</td><td></td><td>          </td><td>見開三B支上</td><td>見開三A支上</td><td></td><td>          </td><td>見開三B支去</td><td>見開三A支去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>溪開三B支平</td><td>溪開三A支平</td><td></td><td>          </td><td>溪開三B支上</td><td>溪開三A支上</td><td></td><td>          </td><td>溪開三B支去</td><td>溪開三A支去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>羣開三B支平</td><td>羣開三A支平</td><td></td><td>          </td><td>羣開三B支上</td><td>羣開三A支上</td><td></td><td>          </td><td>羣開三B支去</td><td>羣開三A支去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>疑開三B支平</td><td>疑開三A支平</td><td></td><td>          </td><td>疑開三B支上</td><td>疑開三A支上</td><td></td><td>          </td><td>疑開三B支去</td><td>疑開三A支去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td></td><td>莊開三支平</td><td>章開三支平 </td><td>精開三支平 </td><td></td><td>莊開三支上</td><td>章開三支上 </td><td>精開三支上 </td><td></td><td>莊開三支去</td><td>章開三支去 </td><td>精開三支去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>初開三支平</td><td>昌開三支平 </td><td>清開三支平 </td><td></td><td>初開三支上</td><td>昌開三支上 </td><td>清開三支上 </td><td></td><td>初開三支去</td><td>昌開三支去 </td><td>清開三支去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>崇開三支平</td><td>船開三支平 </td><td>從開三支平 </td><td></td><td>崇開三支上</td><td>船開三支上 </td><td>從開三支上 </td><td></td><td>崇開三支去</td><td>船開三支去 </td><td>從開三支去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清</th>                             <td></td><td>生開三支平</td><td>書開三支平 </td><td>心開三支平 </td><td></td><td>生開三支上</td><td>書開三支上 </td><td>心開三支上 </td><td></td><td>生開三支去</td><td>書開三支去 </td><td>心開三支去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>俟開三支平</td><td>常開三支平 </td><td>邪開三支平 </td><td></td><td>俟開三支上</td><td>常開三支上 </td><td>邪開三支上 </td><td></td><td>俟開三支去</td><td>常開三支去 </td><td>邪開三支去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td></td><td>          </td><td>影開三B支平</td><td>影開三A支平</td><td></td><td>          </td><td>影開三B支上</td><td>影開三A支上</td><td></td><td>          </td><td>影開三B支去</td><td>影開三A支去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清</th>                             <td></td><td>          </td><td>曉開三B支平</td><td>曉開三A支平</td><td></td><td>          </td><td>曉開三B支上</td><td>曉開三A支上</td><td></td><td>          </td><td>曉開三B支去</td><td>曉開三A支去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>           </td><td>           </td><td></td><td>          </td><td>           </td><td>           </td><td></td><td>          </td><td>           </td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>云開三支平 </td><td>以開三支平 </td><td></td><td>          </td><td>云開三支上 </td><td>以開三支上 </td><td></td><td>          </td><td>云開三支去 </td><td>以開三支去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td></td><td>          </td><td>來開三支平 </td><td>           </td><td></td><td>          </td><td>來開三支上 </td><td>           </td><td></td><td>          </td><td>來開三支去 </td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>日開三支平 </td><td>           </td><td></td><td>          </td><td>日開三支上 </td><td>           </td><td></td><td>          </td><td>日開三支去 </td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th colspan="2"></th><th colspan="4">支</th><th colspan="4">紙</th><th colspan="4">寘</th><th colspan="4"></th></tr>
-</tbody></table></div>
+<h2>內轉第四開合：支</h2>
+<template class="template-data">[
+null,
+["支","假二","平","開"],
+["支","三","平","開"],
+["支","假四","平","開"],
+null,
+["支","假二","上","開"],
+["支","三","上","開"],
+["支","假四","上","開"],
+null,
+["支","假二","去","開"],
+["支","三","去","開"],
+["支","假四","去","開"],
+null,
+null,
+null,
+null
+]</template>
 
-<div class="table-wrapper"><table>
-<thead><th colspan="18">內轉第五合</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td></td><td>          </td><td>           </td><td>           </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>           </td><td>           </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>           </td><td>           </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>           </td><td>           </td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td></td><td>          </td><td>知合三支平 </td><td>           </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>徹合三支平 </td><td>           </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>澄合三支平 </td><td>           </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>孃合三支平 </td><td>           </td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td></td><td>          </td><td>見合三B支平</td><td>見合三A支平</td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>溪合三B支平</td><td>溪合三A支平</td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>羣合三B支平</td><td>羣合三A支平</td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>疑合三B支平</td><td>疑合三A支平</td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td></td><td>莊合三支平</td><td>章合三支平 </td><td>精合三支平 </td></tr>
-<tr><th>次清</th>                           <td></td><td>初合三支平</td><td>昌合三支平 </td><td>清合三支平 </td></tr>
-<tr><th>濁</th>                             <td></td><td>崇合三支平</td><td>船合三支平 </td><td>從合三支平 </td></tr>
-<tr><th>清</th>                             <td></td><td>生合三支平</td><td>書合三支平 </td><td>心合三支平 </td></tr>
-<tr><th>濁</th>                             <td></td><td>俟合三支平</td><td>常合三支平 </td><td>邪合三支平 </td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td></td><td>          </td><td>影合三B支平</td><td>影合三A支平</td></tr>
-<tr><th>清</th>                             <td></td><td>          </td><td>曉合三B支平</td><td>曉合三A支平</td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>           </td><td>           </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>云合三支平 </td><td>以合三支平 </td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td></td><td>          </td><td>來合三支平 </td><td>           </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>日合三支平 </td><td>           </td></tr>
-<tr><th colspan="2"></th><th colspan="4">支</th><th colspan="4">紙</th><th colspan="4">寘</th><th colspan="4"></th></tr>
-</tbody></table></div>
+<h2>內轉第五合：支</h2>
+<template class="template-data">[
+null,
+["支","假二","平","合"],
+["支","三","平","合"],
+["支","假四","平","合"],
+null,
+["支","假二","上","合"],
+["支","三","上","合"],
+["支","假四","上","合"],
+null,
+["支","假二","去","合"],
+["支","三","去","合"],
+["支","假四","去","合"],
+null,
+null,
+null,
+null
+]</template>
 
-<div class="table-wrapper"><table>
-<thead><th colspan="18">內轉第六開</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td></td><td>          </td><td>幫三B脂平  </td><td>幫三A脂平  </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>滂三B脂平  </td><td>滂三A脂平  </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>並三B脂平  </td><td>並三A脂平  </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>明三B脂平  </td><td>明三A脂平  </td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td></td><td>          </td><td>知開三脂平 </td><td>           </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>徹開三脂平 </td><td>           </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>澄開三脂平 </td><td>           </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>孃開三脂平 </td><td>           </td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td></td><td>          </td><td>見開三B脂平</td><td>見開三A脂平</td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>溪開三B脂平</td><td>溪開三A脂平</td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>羣開三B脂平</td><td>羣開三A脂平</td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>疑開三B脂平</td><td>疑開三A脂平</td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td></td><td>莊開三脂平</td><td>章開三脂平 </td><td>精開三脂平 </td></tr>
-<tr><th>次清</th>                           <td></td><td>初開三脂平</td><td>昌開三脂平 </td><td>清開三脂平 </td></tr>
-<tr><th>濁</th>                             <td></td><td>崇開三脂平</td><td>船開三脂平 </td><td>從開三脂平 </td></tr>
-<tr><th>清</th>                             <td></td><td>生開三脂平</td><td>書開三脂平 </td><td>心開三脂平 </td></tr>
-<tr><th>濁</th>                             <td></td><td>俟開三脂平</td><td>常開三脂平 </td><td>邪開三脂平 </td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td></td><td>          </td><td>影開三B脂平</td><td>影開三A脂平</td></tr>
-<tr><th>清</th>                             <td></td><td>          </td><td>曉開三B脂平</td><td>曉開三A脂平</td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>           </td><td>           </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>云開三脂平 </td><td>以開三脂平 </td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td></td><td>          </td><td>來開三脂平 </td><td>           </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>日開三脂平 </td><td>           </td></tr>
-<tr><th colspan="2"></th><th colspan="4">脂</th><th colspan="4">旨</th><th colspan="4">至</th><th colspan="4"></th></tr>
-</tbody></table></div>
+<h2>內轉第六開：脂</h2>
+<template class="template-data">[
+null,
+["脂","假二","平","開"],
+["脂","三","平","開"],
+["脂","假四","平","開"],
+null,
+["脂","假二","上","開"],
+["脂","三","上","開"],
+["脂","假四","上","開"],
+null,
+["脂","假二","去","開"],
+["脂","三","去","開"],
+["脂","假四","去","開"],
+null,
+null,
+null,
+null
+]</template>
 
-<div class="table-wrapper"><table>
-<thead><th colspan="18">內轉第七合</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td></td><td>          </td><td>           </td><td>           </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>           </td><td>           </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>           </td><td>           </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>           </td><td>           </td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td></td><td>          </td><td>知合三脂平 </td><td>           </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>徹合三脂平 </td><td>           </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>澄合三脂平 </td><td>           </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>孃合三脂平 </td><td>           </td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td></td><td>          </td><td>見合三B脂平</td><td>見合三A脂平</td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>溪合三B脂平</td><td>溪合三A脂平</td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>羣合三B脂平</td><td>羣合三A脂平</td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>疑合三B脂平</td><td>疑合三A脂平</td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td></td><td>莊合三脂平</td><td>章合三脂平 </td><td>精合三脂平 </td></tr>
-<tr><th>次清</th>                           <td></td><td>初合三脂平</td><td>昌合三脂平 </td><td>清合三脂平 </td></tr>
-<tr><th>濁</th>                             <td></td><td>崇合三脂平</td><td>船合三脂平 </td><td>從合三脂平 </td></tr>
-<tr><th>清</th>                             <td></td><td>生合三脂平</td><td>書合三脂平 </td><td>心合三脂平 </td></tr>
-<tr><th>濁</th>                             <td></td><td>俟合三脂平</td><td>常合三脂平 </td><td>邪合三脂平 </td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td></td><td>          </td><td>影合三B脂平</td><td>影合三A脂平</td></tr>
-<tr><th>清</th>                             <td></td><td>          </td><td>曉合三B脂平</td><td>曉合三A脂平</td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>           </td><td>           </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>云合三脂平 </td><td>以合三脂平 </td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td></td><td>          </td><td>來合三脂平 </td><td>           </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>日合三脂平 </td><td>           </td></tr>
-<tr><th colspan="2"></th><th colspan="4">脂</th><th colspan="4">旨</th><th colspan="4">至</th><th colspan="4"></th></tr>
-</tbody></table></div>
+<h2>內轉第七合：脂</h2>
+<template class="template-data">[
+null,
+["脂","假二","平","合"],
+["脂","三","平","合"],
+["脂","假四","平","合"],
+null,
+["脂","假二","上","合"],
+["脂","三","上","合"],
+["脂","假四","上","合"],
+null,
+["脂","假二","去","合"],
+["脂","三","去","合"],
+["脂","假四","去","合"],
+null,
+null,
+null,
+null
+]</template>
 
-<div class="table-wrapper"><table>
-<thead><th colspan="18">內轉第八開</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td></td><td>          </td><td>幫三之平  </td><td>          </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>滂三之平  </td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>並三之平  </td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>明三之平  </td><td>          </td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td></td><td>          </td><td>知開三之平</td><td>          </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>徹開三之平</td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>澄開三之平</td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>孃開三之平</td><td>          </td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td></td><td>          </td><td>見開三之平</td><td>          </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>溪開三之平</td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>羣開三之平</td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>疑開三之平</td><td>          </td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td></td><td>莊開三之平</td><td>章開三之平</td><td>精開三之平</td></tr>
-<tr><th>次清</th>                           <td></td><td>初開三之平</td><td>昌開三之平</td><td>清開三之平</td></tr>
-<tr><th>濁</th>                             <td></td><td>崇開三之平</td><td>船開三之平</td><td>從開三之平</td></tr>
-<tr><th>清</th>                             <td></td><td>生開三之平</td><td>書開三之平</td><td>心開三之平</td></tr>
-<tr><th>濁</th>                             <td></td><td>俟開三之平</td><td>常開三之平</td><td>邪開三之平</td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td></td><td>          </td><td>影開三之平</td><td>          </td></tr>
-<tr><th>清</th>                             <td></td><td>          </td><td>曉開三之平</td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>          </td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>云開三之平</td><td>以開三之平</td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td></td><td>          </td><td>來開三之平</td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>日開三之平</td><td>          </td></tr>
-<tr><th colspan="2"></th><th colspan="4">之</th><th colspan="4">止</th><th colspan="4">志</th><th colspan="4"></th></tr>
-</tbody></table></div>
+<h2>內轉第八開：之</h2>
+<template class="template-data">[
+null,
+["之","假二","平","開"],
+["之","三","平","開"],
+["之","假四","平","開"],
+null,
+["之","假二","上","開"],
+["之","三","上","開"],
+["之","假四","上","開"],
+null,
+["之","假二","去","開"],
+["之","三","去","開"],
+["之","假四","去","開"],
+null,
+null,
+null,
+null
+]</template>
 
-<div class="table-wrapper"><table class="no-generate">
-<thead><th colspan="14">內轉第九開</th><th colspan="4">去聲寄此</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td></td><td>          </td><td>知開三微平</td><td>          </td><td></td><td>          </td><td>知開三微上</td><td>          </td><td></td><td>          </td><td>知開三微去</td><td>          </td><td></td><td>          </td><td>知開三廢去</td><td>          </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>徹開三微平</td><td>          </td><td></td><td>          </td><td>徹開三微上</td><td>          </td><td></td><td>          </td><td>徹開三微去</td><td>          </td><td></td><td>          </td><td>徹開三廢去</td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>澄開三微平</td><td>          </td><td></td><td>          </td><td>澄開三微上</td><td>          </td><td></td><td>          </td><td>澄開三微去</td><td>          </td><td></td><td>          </td><td>澄開三廢去</td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>孃開三微平</td><td>          </td><td></td><td>          </td><td>孃開三微上</td><td>          </td><td></td><td>          </td><td>孃開三微去</td><td>          </td><td></td><td>          </td><td>孃開三廢去</td><td>          </td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td></td><td>          </td><td>見開三微平</td><td>          </td><td></td><td>          </td><td>見開三微上</td><td>          </td><td></td><td>          </td><td>見開三微去</td><td>          </td><td></td><td>          </td><td>見開三廢去</td><td>          </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>溪開三微平</td><td>          </td><td></td><td>          </td><td>溪開三微上</td><td>          </td><td></td><td>          </td><td>溪開三微去</td><td>          </td><td></td><td>          </td><td>溪開三廢去</td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>羣開三微平</td><td>          </td><td></td><td>          </td><td>羣開三微上</td><td>          </td><td></td><td>          </td><td>羣開三微去</td><td>          </td><td></td><td>          </td><td>羣開三廢去</td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>疑開三微平</td><td>          </td><td></td><td>          </td><td>疑開三微上</td><td>          </td><td></td><td>          </td><td>疑開三微去</td><td>          </td><td></td><td>          </td><td>疑開三廢去</td><td>          </td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td></td><td>莊開三微平</td><td>章開三微平</td><td>精開三微平</td><td></td><td>莊開三微上</td><td>章開三微上</td><td>精開三微上</td><td></td><td>莊開三微去</td><td>章開三微去</td><td>精開三微去</td><td></td><td>莊開三廢去</td><td>章開三廢去</td><td>精開三廢去</td></tr>
-<tr><th>次清</th>                           <td></td><td>初開三微平</td><td>昌開三微平</td><td>清開三微平</td><td></td><td>初開三微上</td><td>昌開三微上</td><td>清開三微上</td><td></td><td>初開三微去</td><td>昌開三微去</td><td>清開三微去</td><td></td><td>初開三廢去</td><td>昌開三廢去</td><td>清開三廢去</td></tr>
-<tr><th>濁</th>                             <td></td><td>崇開三微平</td><td>船開三微平</td><td>從開三微平</td><td></td><td>崇開三微上</td><td>船開三微上</td><td>從開三微上</td><td></td><td>崇開三微去</td><td>船開三微去</td><td>從開三微去</td><td></td><td>崇開三廢去</td><td>船開三廢去</td><td>從開三廢去</td></tr>
-<tr><th>清</th>                             <td></td><td>生開三微平</td><td>書開三微平</td><td>心開三微平</td><td></td><td>生開三微上</td><td>書開三微上</td><td>心開三微上</td><td></td><td>生開三微去</td><td>書開三微去</td><td>心開三微去</td><td></td><td>生開三廢去</td><td>書開三廢去</td><td>心開三廢去</td></tr>
-<tr><th>濁</th>                             <td></td><td>俟開三微平</td><td>常開三微平</td><td>邪開三微平</td><td></td><td>俟開三微上</td><td>常開三微上</td><td>邪開三微上</td><td></td><td>俟開三微去</td><td>常開三微去</td><td>邪開三微去</td><td></td><td>俟開三廢去</td><td>常開三廢去</td><td>邪開三廢去</td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td></td><td>          </td><td>影開三微平</td><td>          </td><td></td><td>          </td><td>影開三微上</td><td>          </td><td></td><td>          </td><td>影開三微去</td><td>          </td><td></td><td>          </td><td>影開三廢去</td><td>          </td></tr>
-<tr><th>清</th>                             <td></td><td>          </td><td>曉開三微平</td><td>          </td><td></td><td>          </td><td>曉開三微上</td><td>          </td><td></td><td>          </td><td>曉開三微去</td><td>          </td><td></td><td>          </td><td>曉開三廢去</td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>云開三微平</td><td>以開三微平</td><td></td><td>          </td><td>云開三微上</td><td>以開三微上</td><td></td><td>          </td><td>云開三微去</td><td>以開三微去</td><td></td><td>          </td><td>云開三廢去</td><td>以開三廢去</td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td></td><td>          </td><td>來開三微平</td><td>          </td><td></td><td>          </td><td>來開三微上</td><td>          </td><td></td><td>          </td><td>來開三微去</td><td>          </td><td></td><td>          </td><td>來開三廢去</td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>日開三微平</td><td>          </td><td></td><td>          </td><td>日開三微上</td><td>          </td><td></td><td>          </td><td>日開三微去</td><td>          </td><td></td><td>          </td><td>日開三廢去</td><td>          </td></tr>
-<tr><th colspan="2"></th><th colspan="4">微</th><th colspan="4">尾</th><th colspan="4">未</th><th colspan="4">廢</th></tr>
-</tbody></table></div>
+<h2>內轉第九開：微・廢</h2>
+<template class="template-data">[
+null,
+["微","假二","平","開"],
+["微","三","平","開"],
+["微","假四","平","開"],
+null,
+["微","假二","上","開"],
+["微","三","上","開"],
+["微","假四","上","開"],
+null,
+["微","假二","去","開"],
+["微","三","去","開"],
+["微","假四","去","開"],
+null,
+["廢","假二","去","開"],
+["廢","三","去","開"],
+["廢","假四","去","開"]
+]</template>
+<p>註：廢韻去聲寄此。</p>
 
-<div class="table-wrapper"><table class="no-generate">
-<thead><th colspan="14">內轉第十合</th><th colspan="4">去聲寄此</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td></td><td>          </td><td>幫三微平  </td><td>          </td><td></td><td>          </td><td>幫三微上  </td><td>          </td><td></td><td>          </td><td>幫三微去  </td><td>          </td><td></td><td>          </td><td>幫三廢去  </td><td>          </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>滂三微平  </td><td>          </td><td></td><td>          </td><td>滂三微上  </td><td>          </td><td></td><td>          </td><td>滂三微去  </td><td>          </td><td></td><td>          </td><td>滂三廢去  </td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>並三微平  </td><td>          </td><td></td><td>          </td><td>並三微上  </td><td>          </td><td></td><td>          </td><td>並三微去  </td><td>          </td><td></td><td>          </td><td>並三廢去  </td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>明三微平  </td><td>          </td><td></td><td>          </td><td>明三微上  </td><td>          </td><td></td><td>          </td><td>明三微去  </td><td>          </td><td></td><td>          </td><td>明三廢去  </td><td>          </td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td></td><td>          </td><td>知合三微平</td><td>          </td><td></td><td>          </td><td>知合三微上</td><td>          </td><td></td><td>          </td><td>知合三微去</td><td>          </td><td></td><td>          </td><td>知合三廢去</td><td>          </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>徹合三微平</td><td>          </td><td></td><td>          </td><td>徹合三微上</td><td>          </td><td></td><td>          </td><td>徹合三微去</td><td>          </td><td></td><td>          </td><td>徹合三廢去</td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>澄合三微平</td><td>          </td><td></td><td>          </td><td>澄合三微上</td><td>          </td><td></td><td>          </td><td>澄合三微去</td><td>          </td><td></td><td>          </td><td>澄合三廢去</td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>孃合三微平</td><td>          </td><td></td><td>          </td><td>孃合三微上</td><td>          </td><td></td><td>          </td><td>孃合三微去</td><td>          </td><td></td><td>          </td><td>孃合三廢去</td><td>          </td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td></td><td>          </td><td>見合三微平</td><td>          </td><td></td><td>          </td><td>見合三微上</td><td>          </td><td></td><td>          </td><td>見合三微去</td><td>          </td><td></td><td>          </td><td>見合三廢去</td><td>          </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>溪合三微平</td><td>          </td><td></td><td>          </td><td>溪合三微上</td><td>          </td><td></td><td>          </td><td>溪合三微去</td><td>          </td><td></td><td>          </td><td>溪合三廢去</td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>羣合三微平</td><td>          </td><td></td><td>          </td><td>羣合三微上</td><td>          </td><td></td><td>          </td><td>羣合三微去</td><td>          </td><td></td><td>          </td><td>羣合三廢去</td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>疑合三微平</td><td>          </td><td></td><td>          </td><td>疑合三微上</td><td>          </td><td></td><td>          </td><td>疑合三微去</td><td>          </td><td></td><td>          </td><td>疑合三廢去</td><td>          </td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td></td><td>莊合三微平</td><td>章合三微平</td><td>精合三微平</td><td></td><td>莊合三微上</td><td>章合三微上</td><td>精合三微上</td><td></td><td>莊合三微去</td><td>章合三微去</td><td>精合三微去</td><td></td><td>莊合三廢去</td><td>章合三廢去</td><td>精合三廢去</td></tr>
-<tr><th>次清</th>                           <td></td><td>初合三微平</td><td>昌合三微平</td><td>清合三微平</td><td></td><td>初合三微上</td><td>昌合三微上</td><td>清合三微上</td><td></td><td>初合三微去</td><td>昌合三微去</td><td>清合三微去</td><td></td><td>初合三廢去</td><td>昌合三廢去</td><td>清合三廢去</td></tr>
-<tr><th>濁</th>                             <td></td><td>崇合三微平</td><td>船合三微平</td><td>從合三微平</td><td></td><td>崇合三微上</td><td>船合三微上</td><td>從合三微上</td><td></td><td>崇合三微去</td><td>船合三微去</td><td>從合三微去</td><td></td><td>崇合三廢去</td><td>船合三廢去</td><td>從合三廢去</td></tr>
-<tr><th>清</th>                             <td></td><td>生合三微平</td><td>書合三微平</td><td>心合三微平</td><td></td><td>生合三微上</td><td>書合三微上</td><td>心合三微上</td><td></td><td>生合三微去</td><td>書合三微去</td><td>心合三微去</td><td></td><td>生合三廢去</td><td>書合三廢去</td><td>心合三廢去</td></tr>
-<tr><th>濁</th>                             <td></td><td>俟合三微平</td><td>常合三微平</td><td>邪合三微平</td><td></td><td>俟合三微上</td><td>常合三微上</td><td>邪合三微上</td><td></td><td>俟合三微去</td><td>常合三微去</td><td>邪合三微去</td><td></td><td>俟合三廢去</td><td>常合三廢去</td><td>邪合三廢去</td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td></td><td>          </td><td>影合三微平</td><td>          </td><td></td><td>          </td><td>影合三微上</td><td>          </td><td></td><td>          </td><td>影合三微去</td><td>          </td><td></td><td>          </td><td>影合三廢去</td><td>          </td></tr>
-<tr><th>清</th>                             <td></td><td>          </td><td>曉合三微平</td><td>          </td><td></td><td>          </td><td>曉合三微上</td><td>          </td><td></td><td>          </td><td>曉合三微去</td><td>          </td><td></td><td>          </td><td>曉合三廢去</td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>云合三微平</td><td>以合三微平</td><td></td><td>          </td><td>云合三微上</td><td>以合三微上</td><td></td><td>          </td><td>云合三微去</td><td>以合三微去</td><td></td><td>          </td><td>云合三廢去</td><td>以合三廢去</td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td></td><td>          </td><td>來合三微平</td><td>          </td><td></td><td>          </td><td>來合三微上</td><td>          </td><td></td><td>          </td><td>來合三微去</td><td>          </td><td></td><td>          </td><td>來合三廢去</td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>日合三微平</td><td>          </td><td></td><td>          </td><td>日合三微上</td><td>          </td><td></td><td>          </td><td>日合三微去</td><td>          </td><td></td><td>          </td><td>日合三廢去</td><td>          </td></tr>
-<tr><th colspan="2"></th><th colspan="4">微</th><th colspan="4">尾</th><th colspan="4">未</th><th colspan="4">廢</th></tr>
-</tbody></table></div>
+<h2>內轉第十合：微・廢</h2>
+<template class="template-data">[
+null,
+["微","假二","平","合"],
+["微","三","平","合"],
+["微","假四","平","合"],
+null,
+["微","假二","上","合"],
+["微","三","上","合"],
+["微","假四","上","合"],
+null,
+["微","假二","去","合"],
+["微","三","去","合"],
+["微","假四","去","合"],
+null,
+["廢","假二","去","合"],
+["廢","三","去","合"],
+["廢","假四","去","合"]
+]</template>
+<p>註：廢韻去聲寄此。</p>
 
-<div class="table-wrapper"><table>
-<thead><th colspan="18">內轉第十一開</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td></td><td>          </td><td>幫三魚平  </td><td>          </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>滂三魚平  </td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>並三魚平  </td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>明三魚平  </td><td>          </td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td></td><td>          </td><td>知開三魚平</td><td>          </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>徹開三魚平</td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>澄開三魚平</td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>孃開三魚平</td><td>          </td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td></td><td>          </td><td>見開三魚平</td><td>          </td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td>溪開三魚平</td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>羣開三魚平</td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>疑開三魚平</td><td>          </td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td></td><td>莊開三魚平</td><td>章開三魚平</td><td>精開三魚平</td></tr>
-<tr><th>次清</th>                           <td></td><td>初開三魚平</td><td>昌開三魚平</td><td>清開三魚平</td></tr>
-<tr><th>濁</th>                             <td></td><td>崇開三魚平</td><td>船開三魚平</td><td>從開三魚平</td></tr>
-<tr><th>清</th>                             <td></td><td>生開三魚平</td><td>書開三魚平</td><td>心開三魚平</td></tr>
-<tr><th>濁</th>                             <td></td><td>俟開三魚平</td><td>常開三魚平</td><td>邪開三魚平</td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td></td><td>          </td><td>影開三魚平</td><td>          </td></tr>
-<tr><th>清</th>                             <td></td><td>          </td><td>曉開三魚平</td><td>          </td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td>          </td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>云開三魚平</td><td>以開三魚平</td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td></td><td>          </td><td>來開三魚平</td><td>          </td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td>日開三魚平</td><td>          </td></tr>
-<tr><th colspan="2"></th><th colspan="4">魚</th><th colspan="4">語</th><th colspan="4">御</th><th colspan="4"></th></tr>
-</tbody></table></div>
+<h2>內轉第十一開：魚</h2>
+<template class="template-data">[
+null,
+["魚","假二","平","開"],
+["魚","三","平","開"],
+["魚","假四","平","開"],
+null,
+["魚","假二","上","開"],
+["魚","三","上","開"],
+["魚","假四","上","開"],
+null,
+["魚","假二","去","開"],
+["魚","三","去","開"],
+["魚","假四","去","開"],
+null,
+null,
+null,
+null
+]</template>
 
-<div class="table-wrapper"><table>
-<thead><th colspan="18">內轉第十二開合</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td>幫一模平</td><td>        </td><td>幫三虞平</td><td>        </td></tr>
-<tr><th>次清</th>                           <td>滂一模平</td><td>        </td><td>滂三虞平</td><td>        </td></tr>
-<tr><th>濁</th>                             <td>並一模平</td><td>        </td><td>並三虞平</td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>明一模平</td><td>        </td><td>明三虞平</td><td>        </td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td>端一模平</td><td>        </td><td>知三虞平</td><td>        </td></tr>
-<tr><th>次清</th>                           <td>透一模平</td><td>        </td><td>徹三虞平</td><td>        </td></tr>
-<tr><th>濁</th>                             <td>定一模平</td><td>        </td><td>澄三虞平</td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>泥一模平</td><td>        </td><td>孃三虞平</td><td>        </td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td>見一模平</td><td>        </td><td>見三虞平</td><td>        </td></tr>
-<tr><th>次清</th>                           <td>溪一模平</td><td>        </td><td>溪三虞平</td><td>        </td></tr>
-<tr><th>濁</th>                             <td>        </td><td>        </td><td>羣三虞平</td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>疑一模平</td><td>        </td><td>疑三虞平</td><td>        </td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td>精一模平</td><td>莊三虞平</td><td>章三虞平</td><td>精三虞平</td></tr>
-<tr><th>次清</th>                           <td>清一模平</td><td>初三虞平</td><td>昌三虞平</td><td>清三虞平</td></tr>
-<tr><th>濁</th>                             <td>從一模平</td><td>崇三虞平</td><td>船三虞平</td><td>從三虞平</td></tr>
-<tr><th>清</th>                             <td>心一模平</td><td>生三虞平</td><td>書三虞平</td><td>心三虞平</td></tr>
-<tr><th>濁</th>                             <td>        </td><td>俟三虞平</td><td>常三虞平</td><td>邪三虞平</td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td>影一模平</td><td>        </td><td>影三虞平</td><td>        </td></tr>
-<tr><th>清</th>                             <td>曉一模平</td><td>        </td><td>曉三虞平</td><td>        </td></tr>
-<tr><th>濁</th>                             <td>匣一模平</td><td>        </td><td>        </td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>        </td><td>        </td><td>云三虞平</td><td>以三虞平</td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td>來一模平</td><td>        </td><td>來三虞平</td><td>        </td></tr>
-<tr><th>清濁</th>                           <td>        </td><td>        </td><td>日三虞平</td><td>        </td></tr>
-<tr><th colspan="2"></th><th colspan="4">模虞</th><th colspan="4">姥麌</th><th colspan="4">暮遇</th><th colspan="4"></th></tr>
-</tbody></table></div>
+<h2>內轉第十二開合：模虞</h2>
+<template class="template-data">[
+["模","一","平"],
+["虞","假二","平"],
+["虞","三","平"],
+["虞","假四","平"],
+["模","一","上"],
+["虞","假二","上"],
+["虞","三","上"],
+["虞","假四","上"],
+["模","一","去"],
+["虞","假二","去"],
+["虞","三","去"],
+["虞","假四","去"],
+null,
+null,
+null,
+null
+]</template>
 
-<div class="table-wrapper"><table class="no-generate">
-<thead><th colspan="14">外轉第十三開</th><th colspan="4">去聲寄此</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td>幫一咍平  </td><td>幫二皆平  </td><td></td><td>幫四齊平  </td><td>幫一咍上  </td><td>幫二皆上  </td><td></td><td>幫四齊上  </td><td>幫一咍去  </td><td>幫二皆去  </td><td>           </td><td>幫四齊去  </td><td></td><td>          </td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td>滂一咍平  </td><td>滂二皆平  </td><td></td><td>滂四齊平  </td><td>滂一咍上  </td><td>滂二皆上  </td><td></td><td>滂四齊上  </td><td>滂一咍去  </td><td>滂二皆去  </td><td>           </td><td>滂四齊去  </td><td></td><td>          </td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td>並一咍平  </td><td>並二皆平  </td><td></td><td>並四齊平  </td><td>並一咍上  </td><td>並二皆上  </td><td></td><td>並四齊上  </td><td>並一咍去  </td><td>並二皆去  </td><td>           </td><td>並四齊去  </td><td></td><td>          </td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td>明一咍平  </td><td>明二皆平  </td><td></td><td>明四齊平  </td><td>明一咍上  </td><td>明二皆上  </td><td></td><td>明四齊上  </td><td>明一咍去  </td><td>明二皆去  </td><td>           </td><td>明四齊去  </td><td></td><td>          </td><td></td><td></td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td>端開一咍平</td><td>端開二皆平</td><td></td><td>端開四齊平</td><td>端開一咍上</td><td>端開二皆上</td><td></td><td>端開四齊上</td><td>端開一咍去</td><td>端開二皆去</td><td>知開三祭去 </td><td>端開四齊去</td><td></td><td>端開二夬去</td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td>透開一咍平</td><td>透開二皆平</td><td></td><td>透開四齊平</td><td>透開一咍上</td><td>透開二皆上</td><td></td><td>透開四齊上</td><td>透開一咍去</td><td>透開二皆去</td><td>徹開三祭去 </td><td>透開四齊去</td><td></td><td>透開二夬去</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td>定開一咍平</td><td>定開二皆平</td><td></td><td>定開四齊平</td><td>定開一咍上</td><td>定開二皆上</td><td></td><td>定開四齊上</td><td>定開一咍去</td><td>定開二皆去</td><td>澄開三祭去 </td><td>定開四齊去</td><td></td><td>定開二夬去</td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td>泥開一咍平</td><td>泥開二皆平</td><td></td><td>泥開四齊平</td><td>泥開一咍上</td><td>泥開二皆上</td><td></td><td>泥開四齊上</td><td>泥開一咍去</td><td>泥開二皆去</td><td>孃開三祭去 </td><td>泥開四齊去</td><td></td><td>泥開二夬去</td><td></td><td></td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td>見開一咍平</td><td>見開二皆平</td><td></td><td>見開四齊平</td><td>見開一咍上</td><td>見開二皆上</td><td></td><td>見開四齊上</td><td>見開一咍去</td><td>見開二皆去</td><td>見開三B祭去</td><td>見開四齊去</td><td></td><td>見開二夬去</td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td>溪開一咍平</td><td>溪開二皆平</td><td></td><td>溪開四齊平</td><td>溪開一咍上</td><td>溪開二皆上</td><td></td><td>溪開四齊上</td><td>溪開一咍去</td><td>溪開二皆去</td><td>溪開三B祭去</td><td>溪開四齊去</td><td></td><td>溪開二夬去</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td>羣開三B祭去</td><td>          </td><td></td><td>          </td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td>疑開一咍平</td><td>疑開二皆平</td><td></td><td>疑開四齊平</td><td>疑開一咍上</td><td>疑開二皆上</td><td></td><td>疑開四齊上</td><td>疑開一咍去</td><td>疑開二皆去</td><td>疑開三B祭去</td><td>疑開四齊去</td><td></td><td>疑開二夬去</td><td></td><td></td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td>精開一咍平</td><td>莊開二皆平</td><td></td><td>精開四齊平</td><td>精開一咍上</td><td>莊開二皆上</td><td></td><td>精開四齊上</td><td>精開一咍去</td><td>莊開二皆去</td><td>章開三祭去 </td><td>精開四齊去</td><td></td><td>莊開二夬去</td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td>清開一咍平</td><td>初開二皆平</td><td></td><td>清開四齊平</td><td>清開一咍上</td><td>初開二皆上</td><td></td><td>清開四齊上</td><td>清開一咍去</td><td>初開二皆去</td><td>昌開三祭去 </td><td>清開四齊去</td><td></td><td>初開二夬去</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td>從開一咍平</td><td>崇開二皆平</td><td></td><td>從開四齊平</td><td>從開一咍上</td><td>崇開二皆上</td><td></td><td>從開四齊上</td><td>從開一咍去</td><td>崇開二皆去</td><td>船開三祭去 </td><td>從開四齊去</td><td></td><td>崇開二夬去</td><td></td><td></td></tr>
-<tr><th>清</th>                             <td>心開一咍平</td><td>生開二皆平</td><td></td><td>心開四齊平</td><td>心開一咍上</td><td>生開二皆上</td><td></td><td>心開四齊上</td><td>心開一咍去</td><td>生開二皆去</td><td>書開三祭去 </td><td>心開四齊去</td><td></td><td>生開二夬去</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td>常開三祭去 </td><td>          </td><td></td><td>          </td><td></td><td></td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td>影開一咍平</td><td>影開二皆平</td><td></td><td>影開四齊平</td><td>影開一咍上</td><td>影開二皆上</td><td></td><td>影開四齊上</td><td>影開一咍去</td><td>影開二皆去</td><td>影開三B祭去</td><td>影開四齊去</td><td></td><td>影開二夬去</td><td></td><td></td></tr>
-<tr><th>清</th>                             <td>曉開一咍平</td><td>曉開二皆平</td><td></td><td>曉開四齊平</td><td>曉開一咍上</td><td>曉開二皆上</td><td></td><td>曉開四齊上</td><td>曉開一咍去</td><td>曉開二皆去</td><td>曉開三B祭去</td><td>曉開四齊去</td><td></td><td>曉開二夬去</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td>匣開一咍平</td><td>匣開二皆平</td><td></td><td>匣開四齊平</td><td>匣開一咍上</td><td>匣開二皆上</td><td></td><td>匣開四齊上</td><td>匣開一咍去</td><td>匣開二皆去</td><td>           </td><td>匣開四齊去</td><td></td><td>匣開二夬去</td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td>云開三祭去 </td><td>          </td><td></td><td>          </td><td></td><td></td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td>來開一咍平</td><td>來開二皆平</td><td></td><td>來開四齊平</td><td>來開一咍上</td><td>來開二皆上</td><td></td><td>來開四齊上</td><td>來開一咍去</td><td>來開二皆去</td><td>來開三祭去 </td><td>來開四齊去</td><td></td><td>來開二夬去</td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td>日開三祭去 </td><td>          </td><td></td><td>          </td><td></td><td></td></tr>
-<tr><th colspan="2"></th><th colspan="4">咍皆齊</th><th colspan="4">海駭薺</th><th colspan="4">代怪祭霽</th><th colspan="4">夬</th></tr>
-</tbody></table></div>
+<h2>內轉第十三開：咍皆齊・祭夬</h2>
+<template class="template-data">[
+["咍","一","平","開"],
+["皆","二","平","開"],
+null,
+["齊","四","平","開"],
+["咍","一","上","開"],
+["皆","二","上","開"],
+null,
+["齊","四","上","開"],
+["咍","一","去","開"],
+["皆","二","去","開"],
+["祭","三","去","開"],
+["齊","四","去","開"],
+null,
+["夬","二","去","開"],
+null,
+null
+]</template>
 
-<div class="table-wrapper"><table class="no-generate">
-<thead><th colspan="14">外轉第十四合</th><th colspan="4">去聲寄此</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td>幫一灰平  </td><td>          </td><td></td><td>          </td><td>幫一灰上  </td><td>          </td><td></td><td>          </td><td>幫一灰去  </td><td>          </td><td>幫三B祭去  </td><td>          </td><td></td><td>幫二夬去  </td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td>滂一灰平  </td><td>          </td><td></td><td>          </td><td>滂一灰上  </td><td>          </td><td></td><td>          </td><td>滂一灰去  </td><td>          </td><td>滂三B祭去  </td><td>          </td><td></td><td>滂二夬去  </td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td>並一灰平  </td><td>          </td><td></td><td>          </td><td>並一灰上  </td><td>          </td><td></td><td>          </td><td>並一灰去  </td><td>          </td><td>並三B祭去  </td><td>          </td><td></td><td>並二夬去  </td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td>明一灰平  </td><td>          </td><td></td><td>          </td><td>明一灰上  </td><td>          </td><td></td><td>          </td><td>明一灰去  </td><td>          </td><td>明三B祭去  </td><td>          </td><td></td><td>明二夬去  </td><td></td><td></td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td>端合一灰平</td><td>端合二皆平</td><td></td><td>端合四齊平</td><td>端合一灰上</td><td>端合二皆上</td><td></td><td>端合四齊上</td><td>端合一灰去</td><td>端合二皆去</td><td>知合三祭去 </td><td>端合四齊去</td><td></td><td>端合二夬去</td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td>透合一灰平</td><td>透合二皆平</td><td></td><td>透合四齊平</td><td>透合一灰上</td><td>透合二皆上</td><td></td><td>透合四齊上</td><td>透合一灰去</td><td>透合二皆去</td><td>徹合三祭去 </td><td>透合四齊去</td><td></td><td>透合二夬去</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td>定合一灰平</td><td>定合二皆平</td><td></td><td>定合四齊平</td><td>定合一灰上</td><td>定合二皆上</td><td></td><td>定合四齊上</td><td>定合一灰去</td><td>定合二皆去</td><td>澄合三祭去 </td><td>定合四齊去</td><td></td><td>定合二夬去</td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td>泥合一灰平</td><td>泥合二皆平</td><td></td><td>泥合四齊平</td><td>泥合一灰上</td><td>泥合二皆上</td><td></td><td>泥合四齊上</td><td>泥合一灰去</td><td>泥合二皆去</td><td>孃合三祭去 </td><td>泥合四齊去</td><td></td><td>泥合二夬去</td><td></td><td></td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td>見合一灰平</td><td>見合二皆平</td><td></td><td>見合四齊平</td><td>見合一灰上</td><td>見合二皆上</td><td></td><td>見合四齊上</td><td>見合一灰去</td><td>見合二皆去</td><td>見合三B祭去</td><td>見合四齊去</td><td></td><td>見合二夬去</td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td>溪合一灰平</td><td>溪合二皆平</td><td></td><td>溪合四齊平</td><td>溪合一灰上</td><td>溪合二皆上</td><td></td><td>溪合四齊上</td><td>溪合一灰去</td><td>溪合二皆去</td><td>溪合三B祭去</td><td>溪合四齊去</td><td></td><td>溪合二夬去</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td>羣合三B祭去</td><td>          </td><td></td><td>          </td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td>疑合一灰平</td><td>疑合二皆平</td><td></td><td>疑合四齊平</td><td>疑合一灰上</td><td>疑合二皆上</td><td></td><td>疑合四齊上</td><td>疑合一灰去</td><td>疑合二皆去</td><td>疑合三B祭去</td><td>疑合四齊去</td><td></td><td>疑合二夬去</td><td></td><td></td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td>精合一灰平</td><td>莊合二皆平</td><td></td><td>精合四齊平</td><td>精合一灰上</td><td>莊合二皆上</td><td></td><td>精合四齊上</td><td>精合一灰去</td><td>莊合二皆去</td><td>章合三祭去 </td><td>精合四齊去</td><td></td><td>莊合二夬去</td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td>清合一灰平</td><td>初合二皆平</td><td></td><td>清合四齊平</td><td>清合一灰上</td><td>初合二皆上</td><td></td><td>清合四齊上</td><td>清合一灰去</td><td>初合二皆去</td><td>昌合三祭去 </td><td>清合四齊去</td><td></td><td>初合二夬去</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td>從合一灰平</td><td>崇合二皆平</td><td></td><td>從合四齊平</td><td>從合一灰上</td><td>崇合二皆上</td><td></td><td>從合四齊上</td><td>從合一灰去</td><td>崇合二皆去</td><td>船合三祭去 </td><td>從合四齊去</td><td></td><td>崇合二夬去</td><td></td><td></td></tr>
-<tr><th>清</th>                             <td>心合一灰平</td><td>生合二皆平</td><td></td><td>心合四齊平</td><td>心合一灰上</td><td>生合二皆上</td><td></td><td>心合四齊上</td><td>心合一灰去</td><td>生合二皆去</td><td>書合三祭去 </td><td>心合四齊去</td><td></td><td>生合二夬去</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td>常合三祭去 </td><td>          </td><td></td><td>          </td><td></td><td></td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td>影合一灰平</td><td>影合二皆平</td><td></td><td>影合四齊平</td><td>影合一灰上</td><td>影合二皆上</td><td></td><td>影合四齊上</td><td>影合一灰去</td><td>影合二皆去</td><td>影合三B祭去</td><td>影合四齊去</td><td></td><td>影合二夬去</td><td></td><td></td></tr>
-<tr><th>清</th>                             <td>曉合一灰平</td><td>曉合二皆平</td><td></td><td>曉合四齊平</td><td>曉合一灰上</td><td>曉合二皆上</td><td></td><td>曉合四齊上</td><td>曉合一灰去</td><td>曉合二皆去</td><td>曉合三B祭去</td><td>曉合四齊去</td><td></td><td>曉合二夬去</td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td>匣合一灰平</td><td>匣合二皆平</td><td></td><td>匣合四齊平</td><td>匣合一灰上</td><td>匣合二皆上</td><td></td><td>匣合四齊上</td><td>匣合一灰去</td><td>匣合二皆去</td><td>           </td><td>匣合四齊去</td><td></td><td>匣合二夬去</td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td>云合三祭去 </td><td>          </td><td></td><td>          </td><td></td><td></td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td>來合一灰平</td><td>來合二皆平</td><td></td><td>來合四齊平</td><td>來合一灰上</td><td>來合二皆上</td><td></td><td>來合四齊上</td><td>來合一灰去</td><td>來合二皆去</td><td>來合三祭去 </td><td>來合四齊去</td><td></td><td>來合二夬去</td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td></td><td>          </td><td>          </td><td>          </td><td>日合三祭去 </td><td>          </td><td></td><td>          </td><td></td><td></td></tr>
-<tr><th colspan="2"></th><th colspan="4">灰皆齊</th><th colspan="4">賄駭薺</th><th colspan="4">隊怪祭霽</th><th colspan="4">夬</th></tr>
-</tbody></table></div>
+<h2>外轉第十四合：灰皆齊・祭夬</h2>
+<template class="template-data">[
+["灰","一","平","合"],
+["皆","二","平","合"],
+null,
+["齊","四","平","合"],
+["灰","一","上","合"],
+["皆","二","上","合"],
+null,
+["齊","四","上","合"],
+["灰","一","去","合"],
+["皆","二","去","合"],
+["祭","三","去","合"],
+["齊","四","去","合"],
+null,
+["夬","二","去","合"],
+null,
+null
+]</template>
 
-<div class="table-wrapper"><table class="no-generate">
-<thead><th colspan="18">外轉第十五開</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td></td><td>幫二佳平  </td><td></td><td></td><td></td><td>幫二佳上  </td><td></td><td></td><td>幫一泰去  </td><td>幫二佳去  </td><td></td><td>幫三A祭去  </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>滂二佳平  </td><td></td><td></td><td></td><td>滂二佳上  </td><td></td><td></td><td>滂一泰去  </td><td>滂二佳去  </td><td></td><td>滂三A祭去  </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>並二佳平  </td><td></td><td></td><td></td><td>並二佳上  </td><td></td><td></td><td>並一泰去  </td><td>並二佳去  </td><td></td><td>並三A祭去  </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>明二佳平  </td><td></td><td></td><td></td><td>明二佳上  </td><td></td><td></td><td>明一泰去  </td><td>明二佳去  </td><td></td><td>明三A祭去  </td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td></td><td>知開二佳平</td><td></td><td></td><td></td><td>知開二佳上</td><td></td><td></td><td>端開一泰去</td><td>知開二佳去</td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>徹開二佳平</td><td></td><td></td><td></td><td>徹開二佳上</td><td></td><td></td><td>透開一泰去</td><td>徹開二佳去</td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>澄開二佳平</td><td></td><td></td><td></td><td>澄開二佳上</td><td></td><td></td><td>定開一泰去</td><td>澄開二佳去</td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>孃開二佳平</td><td></td><td></td><td></td><td>孃開二佳上</td><td></td><td></td><td>泥開一泰去</td><td>孃開二佳去</td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td></td><td>見開二佳平</td><td></td><td></td><td></td><td>見開二佳上</td><td></td><td></td><td>見開一泰去</td><td>見開二佳去</td><td></td><td>見開三A祭去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>溪開二佳平</td><td></td><td></td><td></td><td>溪開二佳上</td><td></td><td></td><td>溪開一泰去</td><td>溪開二佳去</td><td></td><td>溪開三A祭去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td></td><td></td><td></td><td>          </td><td></td><td></td><td>          </td><td>          </td><td></td><td>羣開三A祭去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>疑開二佳平</td><td></td><td></td><td></td><td>疑開二佳上</td><td></td><td></td><td>疑開一泰去</td><td>疑開二佳去</td><td></td><td>疑開三A祭去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td></td><td>莊開二佳平</td><td></td><td></td><td></td><td>莊開二佳上</td><td></td><td></td><td>精開一泰去</td><td>莊開二佳去</td><td></td><td>精開三祭去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>初開二佳平</td><td></td><td></td><td></td><td>初開二佳上</td><td></td><td></td><td>清開一泰去</td><td>初開二佳去</td><td></td><td>清開三祭去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>崇開二佳平</td><td></td><td></td><td></td><td>崇開二佳上</td><td></td><td></td><td>從開一泰去</td><td>崇開二佳去</td><td></td><td>從開三祭去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清</th>                             <td></td><td>生開二佳平</td><td></td><td></td><td></td><td>生開二佳上</td><td></td><td></td><td>心開一泰去</td><td>生開二佳去</td><td></td><td>心開三祭去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td></td><td></td><td></td><td>          </td><td></td><td></td><td>          </td><td>          </td><td></td><td>邪開三祭去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td></td><td>影開二佳平</td><td></td><td></td><td></td><td>影開二佳上</td><td></td><td></td><td>影開一泰去</td><td>影開二佳去</td><td></td><td>影開三A祭去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清</th>                             <td></td><td>曉開二佳平</td><td></td><td></td><td></td><td>曉開二佳上</td><td></td><td></td><td>曉開一泰去</td><td>曉開二佳去</td><td></td><td>曉開三A祭去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>匣開二佳平</td><td></td><td></td><td></td><td>匣開二佳上</td><td></td><td></td><td>匣開一泰去</td><td>匣開二佳去</td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td></td><td></td><td></td><td>          </td><td></td><td></td><td>          </td><td>          </td><td></td><td>以開三祭去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td></td><td>來開二佳平</td><td></td><td></td><td></td><td>來開二佳上</td><td></td><td></td><td>來開一泰去</td><td>來開二佳去</td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td></td><td></td><td></td><td>          </td><td></td><td></td><td>          </td><td>          </td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th colspan="2"></th><th colspan="4">佳</th><th colspan="4">蟹</th><th colspan="4">泰卦祭</th><th colspan="4"></th></tr>
-</tbody></table></div>
+<h2>外轉第十五開：佳・泰祭</h2>
+<template class="template-data">[
+null,
+["佳","二","平","開"],
+null,
+null,
+null,
+["佳","二","上","開"],
+null,
+null,
+["泰","一","去","開"],
+["佳","二","去","開"],
+null,
+["祭","假四","去","開"],
+null,
+null,
+null,
+null
+]</template>
 
-<div class="table-wrapper"><table class="no-generate">
-<thead><th colspan="18">外轉第十六合</th></thead>
-<tbody>
-<tr><th rowspan="4">脣音</th><th>清</th>    <td></td><td>          </td><td></td><td></td><td></td><td>          </td><td></td><td></td><td>          </td><td>          </td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>          </td><td></td><td></td><td></td><td>          </td><td></td><td></td><td>          </td><td>          </td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td></td><td></td><td></td><td>          </td><td></td><td></td><td>          </td><td>          </td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td></td><td></td><td></td><td>          </td><td></td><td></td><td>          </td><td>          </td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="4">舌音</th><th>清</th>    <td></td><td>知合二佳平</td><td></td><td></td><td></td><td>知合二佳上</td><td></td><td></td><td>端合一泰去</td><td>知合二佳去</td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>徹合二佳平</td><td></td><td></td><td></td><td>徹合二佳上</td><td></td><td></td><td>透合一泰去</td><td>徹合二佳去</td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>澄合二佳平</td><td></td><td></td><td></td><td>澄合二佳上</td><td></td><td></td><td>定合一泰去</td><td>澄合二佳去</td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>孃合二佳平</td><td></td><td></td><td></td><td>孃合二佳上</td><td></td><td></td><td>泥合一泰去</td><td>孃合二佳去</td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="4">牙音</th><th>清</th>    <td></td><td>見合二佳平</td><td></td><td></td><td></td><td>見合二佳上</td><td></td><td></td><td>見合一泰去</td><td>見合二佳去</td><td></td><td>見合三A祭去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>溪合二佳平</td><td></td><td></td><td></td><td>溪合二佳上</td><td></td><td></td><td>溪合一泰去</td><td>溪合二佳去</td><td></td><td>溪合三A祭去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td></td><td></td><td></td><td>          </td><td></td><td></td><td>          </td><td>          </td><td></td><td>羣合三A祭去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>疑合二佳平</td><td></td><td></td><td></td><td>疑合二佳上</td><td></td><td></td><td>疑合一泰去</td><td>疑合二佳去</td><td></td><td>疑合三A祭去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="5">齒音</th><th>清</th>    <td></td><td>莊合二佳平</td><td></td><td></td><td></td><td>莊合二佳上</td><td></td><td></td><td>精合一泰去</td><td>莊合二佳去</td><td></td><td>精合三祭去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>次清</th>                           <td></td><td>初合二佳平</td><td></td><td></td><td></td><td>初合二佳上</td><td></td><td></td><td>清合一泰去</td><td>初合二佳去</td><td></td><td>清合三祭去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>崇合二佳平</td><td></td><td></td><td></td><td>崇合二佳上</td><td></td><td></td><td>從合一泰去</td><td>崇合二佳去</td><td></td><td>從合三祭去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清</th>                             <td></td><td>生合二佳平</td><td></td><td></td><td></td><td>生合二佳上</td><td></td><td></td><td>心合一泰去</td><td>生合二佳去</td><td></td><td>心合三祭去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>          </td><td></td><td></td><td></td><td>          </td><td></td><td></td><td>          </td><td>          </td><td></td><td>邪合三祭去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="4">喉音</th><th>清</th>    <td></td><td>影合二佳平</td><td></td><td></td><td></td><td>影合二佳上</td><td></td><td></td><td>影合一泰去</td><td>影合二佳去</td><td></td><td>影合三A祭去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清</th>                             <td></td><td>曉合二佳平</td><td></td><td></td><td></td><td>曉合二佳上</td><td></td><td></td><td>曉合一泰去</td><td>曉合二佳去</td><td></td><td>曉合三A祭去</td><td></td><td></td><td></td><td></td></tr>
-<tr><th>濁</th>                             <td></td><td>匣合二佳平</td><td></td><td></td><td></td><td>匣合二佳上</td><td></td><td></td><td>匣合一泰去</td><td>匣合二佳去</td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td></td><td></td><td></td><td>          </td><td></td><td></td><td>          </td><td>          </td><td></td><td>以合三祭去 </td><td></td><td></td><td></td><td></td></tr>
-<tr><th rowspan="2">舌音齒</th><th>清濁</th><td></td><td>來合二佳平</td><td></td><td></td><td></td><td>來合二佳上</td><td></td><td></td><td>來合一泰去</td><td>來合二佳去</td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th>清濁</th>                           <td></td><td>          </td><td></td><td></td><td></td><td>          </td><td></td><td></td><td>          </td><td>          </td><td></td><td>           </td><td></td><td></td><td></td><td></td></tr>
-<tr><th colspan="2"></th><th colspan="4">佳</th><th colspan="4">蟹</th><th colspan="4">泰卦祭</th><th colspan="4"></th></tr>
-</tbody></table></div>
+<h2>外轉第十五開①：祭</h2>
+<template class="template-data">[
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+["祭","假二","去","開"],
+null,
+null,
+null,
+null,
+null,
+null
+]</template>
+
+<h2>外轉第十六合：佳・泰祭</h2>
+<template class="template-data">[
+null,
+["佳","二","平","合"],
+null,
+null,
+null,
+["佳","二","上","合"],
+null,
+null,
+["泰","一","去","合"],
+["佳","二","去","合"],
+null,
+["祭","假四","去","合"],
+null,
+null,
+null,
+null
+]</template>
+
+<h2>外轉第十六合①：祭</h2>
+<template class="template-data">[
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+["祭","假二","去","合"],
+null,
+null,
+null,
+null,
+null,
+null
+]</template>
+
+<h2>外轉第十七開：痕臻眞</h2>
+<template class="template-data">[
+["痕","一","平","開"],
+["臻","假二","平","開"],
+["眞","三","平","開"],
+["眞","假四","平","開"],
+["痕","一","上","開"],
+["眞","假二","上","開"],
+["眞","三","上","開"],
+["眞","假四","上","開"],
+["痕","一","去","開"],
+["眞","假二","去","開"],
+["眞","三","去","開"],
+["眞","假四","去","開"],
+["痕","一","入","開"],
+["臻","假二","入","開"],
+["眞","三","入","開"],
+["眞","假四","入","開"]
+]</template>
+<p>註：臻韻只有莊組平去聲六個小韻，與眞韻互補。</p>
+
+<h2>外轉第十八合：魂眞</h2>
+<template class="template-data">[
+["魂","一","平","合"],
+["眞","假二","平","合"],
+["眞","三","平","合"],
+["眞","假四","平","合"],
+["魂","一","上","合"],
+["眞","假二","上","合"],
+["眞","三","上","合"],
+["眞","假四","上","合"],
+["魂","一","去","合"],
+["眞","假二","去","合"],
+["眞","三","去","合"],
+["眞","假四","去","合"],
+["魂","一","入","合"],
+["眞","假二","入","合"],
+["眞","三","入","合"],
+["眞","假四","入","合"]
+]</template>
+
+<h2>外轉第十九開：欣</h2>
+<template class="template-data">[
+null,
+["欣","假二","平","開"],
+["欣","三","平","開"],
+["欣","假四","平","開"],
+null,
+["欣","假二","上","開"],
+["欣","三","上","開"],
+["欣","假四","上","開"],
+null,
+["欣","假二","去","開"],
+["欣","三","去","開"],
+["欣","假四","去","開"],
+null,
+["欣","假二","入","開"],
+["欣","三","入","開"],
+["欣","假四","入","開"]
+]</template>
+
+<h2>外轉第二十合：文</h2>
+<template class="template-data">[
+null,
+["文","假二","平","合"],
+["文","三","平","合"],
+["文","假四","平","合"],
+null,
+["文","假二","上","合"],
+["文","三","上","合"],
+["文","假四","上","合"],
+null,
+["文","假二","去","合"],
+["文","三","去","合"],
+["文","假四","去","合"],
+null,
+["文","假二","入","合"],
+["文","三","入","合"],
+["文","假四","入","合"]
+]</template>
+
+<h2>外轉第二十一開：山元仙</h2>
+<template class="template-data">[
+null,
+["山","二","平","開"],
+["元","三","平","開"],
+["仙","假四","平","開"],
+null,
+["山","二","上","開"],
+["元","三","上","開"],
+["仙","假四","上","開"],
+null,
+["山","二","去","開"],
+["元","三","去","開"],
+["仙","假四","去","開"],
+null,
+["山","二","入","開"],
+["元","三","入","開"],
+["仙","假四","入","開"]
+]</template>
+
+<h2>外轉第二十一開①：元</h2>
+<template class="template-data">[
+null,
+["元","假二","平","開"],
+null,
+null,
+null,
+["元","假二","上","開"],
+null,
+null,
+null,
+["元","假二","去","開"],
+null,
+null,
+null,
+["元","假二","入","開"],
+null,
+null
+]</template>
+
+<h2>外轉第二十二合：山元仙</h2>
+<template class="template-data">[
+null,
+["山","二","平","合"],
+["元","三","平","合"],
+["仙","假四","平","合"],
+null,
+["山","二","上","合"],
+["元","三","上","合"],
+["仙","假四","上","合"],
+null,
+["山","二","去","合"],
+["元","三","去","合"],
+["仙","假四","去","合"],
+null,
+["山","二","入","合"],
+["元","三","入","合"],
+["仙","假四","入","合"]
+]</template>
+
+<h2>外轉第二十二合①：元</h2>
+<template class="template-data">[
+null,
+["元","假二","平","合"],
+null,
+null,
+null,
+["元","假二","上","合"],
+null,
+null,
+null,
+["元","假二","去","合"],
+null,
+null,
+null,
+["元","假二","入","合"],
+null,
+null
+]</template>
+
+<h2>外轉第二十三開：寒刪仙先</h2>
+<template class="template-data">[
+["寒","一","平","開"],
+["刪","二","平","開"],
+["仙","三","平","開"],
+["先","四","平","開"],
+["寒","一","上","開"],
+["刪","二","上","開"],
+["仙","三","上","開"],
+["先","四","上","開"],
+["寒","一","去","開"],
+["刪","二","去","開"],
+["仙","三","去","開"],
+["先","四","去","開"],
+["寒","一","入","開"],
+["刪","二","入","開"],
+["仙","三","入","開"],
+["先","四","入","開"]
+]</template>
+
+<h2>外轉第二十三開①：仙</h2>
+<template class="template-data">[
+null,
+["仙","假二","平","開"],
+null,
+null,
+null,
+["仙","假二","上","開"],
+null,
+null,
+null,
+["仙","假二","去","開"],
+null,
+null,
+null,
+["仙","假二","入","開"],
+null,
+null
+]</template>
+
+<h2>外轉第二十四合：寒刪仙先</h2>
+<template class="template-data">[
+["寒","一","平","合"],
+["刪","二","平","合"],
+["仙","三","平","合"],
+["先","四","平","合"],
+["寒","一","上","合"],
+["刪","二","上","合"],
+["仙","三","上","合"],
+["先","四","上","合"],
+["寒","一","去","合"],
+["刪","二","去","合"],
+["仙","三","去","合"],
+["先","四","去","合"],
+["寒","一","入","合"],
+["刪","二","入","合"],
+["仙","三","入","合"],
+["先","四","入","合"]
+]</template>
+
+<h2>外轉第二十三合①：仙</h2>
+<template class="template-data">[
+null,
+["仙","假二","平","合"],
+null,
+null,
+null,
+["仙","假二","上","合"],
+null,
+null,
+null,
+["仙","假二","去","合"],
+null,
+null,
+null,
+["仙","假二","入","合"],
+null,
+null
+]</template>
+
+<h2>外轉第二十五開：豪肴宵蕭</h2>
+<template class="template-data">[
+["豪","一","平","開"],
+["肴","二","平","開"],
+["宵","三","平","開"],
+["蕭","四","平","開"],
+["豪","一","上","開"],
+["肴","二","上","開"],
+["宵","三","上","開"],
+["蕭","四","上","開"],
+["豪","一","去","開"],
+["肴","二","去","開"],
+["宵","三","去","開"],
+["蕭","四","去","開"],
+null,
+null,
+null,
+null
+]</template>
+
+<h2>外轉第二十六合：宵</h2>
+<template class="template-data">[
+null,
+["宵","假二","平","開"],
+null,
+["宵","假四","平","開"],
+null,
+["宵","假二","上","開"],
+null,
+["宵","假四","上","開"],
+null,
+["宵","假二","去","開"],
+null,
+["宵","假四","去","開"],
+null,
+null,
+null,
+null
+]</template>
+
+<h2>內轉第二十七合：歌</h2>
+<template class="template-data">[
+["歌","一","平","開"],
+null,
+null,
+null,
+["歌","一","上","開"],
+null,
+null,
+null,
+["歌","一","去","開"],
+null,
+null,
+null,
+null,
+null,
+null,
+null
+]</template>
+
+<h2>內轉第二十八合：歌</h2>
+<template class="template-data">[
+["歌","一","平","合"],
+null,
+null,
+null,
+["歌","一","上","合"],
+null,
+null,
+null,
+["歌","一","去","合"],
+null,
+null,
+null,
+null,
+null,
+null,
+null
+]</template>
+
+<h2>內轉第二十九開：麻</h2>
+<template class="template-data">[
+null,
+["麻","二","平","開"],
+["麻","三","平","開"],
+["麻","假四","平","開"],
+null,
+["麻","二","上","開"],
+["麻","三","上","開"],
+["麻","假四","上","開"],
+null,
+["麻","二","去","開"],
+["麻","三","去","開"],
+["麻","假四","去","開"],
+null,
+null,
+null,
+null
+]</template>
+
+<h2>內轉第二十九開①：麻</h2>
+<template class="template-data">[
+null,
+["麻","假二","平","開"],
+null,
+null,
+null,
+["麻","假二","上","開"],
+null,
+null,
+null,
+["麻","假二","去","開"],
+null,
+null,
+null,
+null,
+null,
+null
+]</template>
+
+<h2>外轉第三十合：麻</h2>
+<template class="template-data">[
+null,
+["麻","二","平","合"],
+null,
+null,
+null,
+["麻","二","上","合"],
+null,
+null,
+null,
+["麻","二","去","合"],
+null,
+null,
+null,
+null,
+null,
+null
+]</template>
+
+<h2>內轉第三十一開：唐陽</h2>
+<template class="template-data">[
+["唐","一","平","開"],
+["陽","假二","平","開"],
+["陽","三","平","開"],
+["陽","假四","平","開"],
+["唐","一","上","開"],
+["陽","假二","上","開"],
+["陽","三","上","開"],
+["陽","假四","上","開"],
+["唐","一","去","開"],
+["陽","假二","去","開"],
+["陽","三","去","開"],
+["陽","假四","去","開"],
+["唐","一","入","開"],
+["陽","假二","入","開"],
+["陽","三","入","開"],
+["陽","假四","入","開"]
+]</template>
+
+<h2>內轉第三十二合：唐陽</h2>
+<template class="template-data">[
+["唐","一","平","合"],
+["陽","假二","平","合"],
+["陽","三","平","合"],
+["陽","假四","平","合"],
+["唐","一","上","合"],
+["陽","假二","上","合"],
+["陽","三","上","合"],
+["陽","假四","上","合"],
+["唐","一","去","合"],
+["陽","假二","去","合"],
+["陽","三","去","合"],
+["陽","假四","去","合"],
+["唐","一","入","合"],
+["陽","假二","入","合"],
+["陽","三","入","合"],
+["陽","假四","入","合"]
+]</template>
+
+<h2>外轉第三十三開：庚清</h2>
+<template class="template-data">[
+null,
+["庚","二","平","開"],
+["庚","三","平","開"],
+["清","假四","平","開"],
+null,
+["庚","二","上","開"],
+["庚","三","上","開"],
+["清","假四","上","開"],
+null,
+["庚","二","去","開"],
+["庚","三","去","開"],
+["清","假四","去","開"],
+null,
+["庚","二","入","開"],
+["庚","三","入","開"],
+["清","假四","入","開"]
+]</template>
+<p>註：庚三與清是重紐關係。</p>
+
+<h2>外轉第三十三開①：庚</h2>
+<template class="template-data">[
+null,
+["庚","假二","平","開"],
+null,
+["庚","假四","平","開"],
+null,
+["庚","假二","上","開"],
+null,
+["庚","假四","上","開"],
+null,
+["庚","假二","去","開"],
+null,
+["庚","假四","去","開"],
+null,
+["庚","假二","入","開"],
+null,
+["庚","假四","入","開"]
+]</template>
+
+<h2>外轉第三十四合：庚清</h2>
+<template class="template-data">[
+null,
+["庚","二","平","合"],
+["庚","三","平","合"],
+["清","假四","平","合"],
+null,
+["庚","二","上","合"],
+["庚","三","上","合"],
+["清","假四","上","合"],
+null,
+["庚","二","去","合"],
+["庚","三","去","合"],
+["清","假四","去","合"],
+null,
+["庚","二","入","合"],
+["庚","三","入","合"],
+["清","假四","入","合"]
+]</template>
+
+<h2>外轉第三十四合①：庚</h2>
+<template class="template-data">[
+null,
+["庚","假二","平","合"],
+null,
+["庚","假四","平","合"],
+null,
+["庚","假二","上","合"],
+null,
+["庚","假四","上","合"],
+null,
+["庚","假二","去","合"],
+null,
+["庚","假四","去","合"],
+null,
+["庚","假二","入","合"],
+null,
+["庚","假四","入","合"]
+]</template>
+
+<h2>外轉第三十五開：耕清青</h2>
+<template class="template-data">[
+null,
+["耕","二","平","開"],
+["清","三","平","開"],
+["青","四","平","開"],
+null,
+["耕","二","上","開"],
+["清","三","上","開"],
+["青","四","上","開"],
+null,
+["耕","二","去","開"],
+["清","三","去","開"],
+["青","四","去","開"],
+null,
+["耕","二","入","開"],
+["清","三","入","開"],
+["青","四","入","開"]
+]</template>
+
+<h2>外轉第三十五開①：清</h2>
+<template class="template-data">[
+null,
+["清","假二","平","開"],
+null,
+null,
+null,
+["清","假二","上","開"],
+null,
+null,
+null,
+["清","假二","去","開"],
+null,
+null,
+null,
+["清","假二","入","開"],
+null,
+null
+]</template>
+
+<h2>外轉第三十六合：耕清青</h2>
+<template class="template-data">[
+null,
+["耕","二","平","合"],
+["清","三","平","合"],
+["青","四","平","合"],
+null,
+["耕","二","上","合"],
+["清","三","上","合"],
+["青","四","上","合"],
+null,
+["耕","二","去","合"],
+["清","三","去","合"],
+["青","四","去","合"],
+null,
+["耕","二","入","合"],
+["清","三","入","合"],
+["青","四","入","合"]
+]</template>
+
+<h2>外轉第三十六合①：清</h2>
+<template class="template-data">[
+null,
+["清","假二","平","合"],
+null,
+null,
+null,
+["清","假二","上","合"],
+null,
+null,
+null,
+["清","假二","去","合"],
+null,
+null,
+null,
+["清","假二","入","合"],
+null,
+null
+]</template>
+
+<h2>內轉第三十七開：侯尤幽</h2>
+<template class="template-data">[
+["侯","一","平","開"],
+["尤","假二","平"],
+["尤","三","平"],
+["幽","三","平"],
+["侯","一","上","開"],
+["尤","假二","上"],
+["尤","三","上"],
+["幽","三","上"],
+["侯","一","去","開"],
+["尤","假二","去"],
+["尤","三","去"],
+["幽","三","去"],
+null,
+null,
+null,
+null
+]</template>
+
+<h2>內轉第三十七開①：尤</h2>
+<template class="template-data">[
+null,
+null,
+null,
+["尤","假四","平"],
+null,
+null,
+null,
+["尤","假四","上"],
+null,
+null,
+null,
+["尤","假四","去"],
+null,
+null,
+null,
+null
+]</template>
+
+<h2>內轉第三十七開②：幽</h2>
+<template class="template-data">[
+null,
+["幽","假二","平"],
+null,
+["幽","假四","平"],
+null,
+["幽","假二","上"],
+null,
+["幽","假四","上"],
+null,
+["幽","假二","去"],
+null,
+["幽","假四","去"],
+null,
+null,
+null,
+null
+]</template>
+
+<h2>內轉第三十八合：侵</h2>
+<template class="template-data">[
+null,
+["侵","假二","平","開"],
+["侵","三","平","開"],
+["侵","假四","平","開"],
+null,
+["侵","假二","上","開"],
+["侵","三","上","開"],
+["侵","假四","上","開"],
+null,
+["侵","假二","去","開"],
+["侵","三","去","開"],
+["侵","假四","去","開"],
+null,
+["侵","假二","入","開"],
+["侵","三","入","開"],
+["侵","假四","入","開"]
+]</template>
+
+<h2>外轉第三十九開：覃咸鹽添</h2>
+<template class="template-data">[
+["覃","一","平","開"],
+["咸","二","平","開"],
+["鹽","三","平","開"],
+["添","四","平","開"],
+["覃","一","上","開"],
+["咸","二","上","開"],
+["鹽","三","上","開"],
+["添","四","上","開"],
+["覃","一","去","開"],
+["咸","二","去","開"],
+["鹽","三","去","開"],
+["添","四","去","開"],
+["覃","一","入","開"],
+["咸","二","入","開"],
+["鹽","三","入","開"],
+["添","四","入","開"]
+]</template>
+
+<h2>外轉第四十合：談銜嚴鹽</h2>
+<template class="template-data">[
+["談","一","平","開"],
+["銜","二","平","開"],
+["嚴","三","平","開"],
+["鹽","假四","平","開"],
+["談","一","上","開"],
+["銜","二","上","開"],
+["嚴","三","上","開"],
+["鹽","假四","上","開"],
+["談","一","去","開"],
+["銜","二","去","開"],
+["嚴","三","去","開"],
+["鹽","假四","去","開"],
+["談","一","入","開"],
+["銜","二","入","開"],
+["嚴","三","入","開"],
+["鹽","假四","入","開"]
+]</template>
+
+<h2>外轉第四十合①：鹽</h2>
+<template class="template-data">[
+null,
+["鹽","假二","平","開"],
+null,
+null,
+null,
+["鹽","假二","上","開"],
+null,
+null,
+null,
+["鹽","假二","去","開"],
+null,
+null,
+null,
+["鹽","假二","入","開"],
+null,
+null
+]</template>
+
+<h2>外轉第四十合②：嚴</h2>
+<template class="template-data">[
+null,
+["嚴","假二","平","開"],
+null,
+["嚴","假四","平","開"],
+null,
+["嚴","假二","上","開"],
+null,
+["嚴","假四","上","開"],
+null,
+["嚴","假二","去","開"],
+null,
+["嚴","假四","去","開"],
+null,
+["嚴","假二","入","開"],
+null,
+["嚴","假四","入","開"]
+]</template>
+
+<h2>外轉第四十一合：凡</h2>
+<template class="template-data">[
+null,
+["凡","假二","平","合"],
+["凡","三","平","合"],
+["凡","假四","平","合"],
+null,
+["凡","假二","上","合"],
+["凡","三","上","合"],
+["凡","假四","上","合"],
+null,
+["凡","假二","去","合"],
+["凡","三","去","合"],
+["凡","假四","去","合"],
+null,
+["凡","假二","入","合"],
+["凡","三","入","合"],
+["凡","假四","入","合"]
+]</template>
+
+<h2>外轉第四十二開：登蒸</h2>
+<template class="template-data">[
+["登","一","平","開"],
+["蒸","假二","平","開"],
+["蒸","三","平","開"],
+["蒸","假四","平","開"],
+["登","一","上","開"],
+["蒸","假二","上","開"],
+["蒸","三","上","開"],
+["蒸","假四","上","開"],
+["登","一","去","開"],
+["蒸","假二","去","開"],
+["蒸","三","去","開"],
+["蒸","假四","去","開"],
+["登","一","入","開"],
+["蒸","假二","入","開"],
+["蒸","三","入","開"],
+["蒸","假四","入","開"]
+]</template>
+
+<h2>外轉第四十三合：登蒸</h2>
+<template class="template-data">[
+["登","一","平","合"],
+["蒸","假二","平","合"],
+["蒸","三","平","合"],
+["蒸","假四","平","合"],
+["登","一","上","合"],
+["蒸","假二","上","合"],
+["蒸","三","上","合"],
+["蒸","假四","上","合"],
+["登","一","去","合"],
+["蒸","假二","去","合"],
+["蒸","三","去","合"],
+["蒸","假四","去","合"],
+["登","一","入","合"],
+["蒸","假二","入","合"],
+["蒸","三","入","合"],
+["蒸","假四","入","合"]
+]</template>
+
+<template id="template-table"><div class="table-wrapper"><table><tbody>
+<tr><th rowspan="4">脣 音</th><th>清</th></tr>
+<tr><th>次 清</th></tr>
+<tr><th>濁</th></tr>
+<tr><th>清 濁</th></tr>
+<tr><th rowspan="4">舌 音</th><th>清</th></tr>
+<tr><th>次 清</th></tr>
+<tr><th>濁</th></tr>
+<tr><th>清 濁</th></tr>
+<tr><th rowspan="4">牙 音</th><th>清</th></tr>
+<tr><th>次 清</th></tr>
+<tr><th>濁</th></tr>
+<tr><th>清 濁</th></tr>
+<tr><th rowspan="5">齒 音</th><th>清</th></tr>
+<tr><th>次 清</th></tr>
+<tr><th>濁</th></tr>
+<tr><th>清</th></tr>
+<tr><th>濁</th></tr>
+<tr><th rowspan="4">喉 音</th><th>清</th></tr>
+<tr><th>清</th></tr>
+<tr><th>濁</th></tr>
+<tr><th>清 濁</th></tr>
+<tr><th rowspan="2">舌音齒</th><th>清 濁</th></tr>
+<tr><th>清 濁</th></tr>
+<tr><th colspan="2"></th></tr>
+</tbody></table></div></template>
 
 </body>
 </html>

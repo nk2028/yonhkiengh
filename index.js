@@ -19,13 +19,12 @@ handleCheckBox2Change();
 ((() => {
   const fragment = document.createDocumentFragment();
 
-  [...document.getElementsByTagName('table')].forEach((table, i) => {
-    table.id = 't' + (i + 1);
-
+  [...document.getElementsByTagName('h2')].forEach((h2) => {
     const li = document.createElement('li');
     const a = document.createElement('a');
-    a.href = '#t' + (i + 1);
-    a.innerText = table.querySelector('thead th').textContent + '：' + [...table.querySelectorAll('tbody tr:last-child th + th')].map((th) => th.textContent).filter(Boolean).join('、');
+    a.href = 'javascript:void(0)';
+    a.onclick = () => h2.scrollIntoView();
+    a.innerText = h2.textContent;
     li.appendChild(a);
     fragment.appendChild(li);
   });
@@ -34,69 +33,107 @@ handleCheckBox2Change();
   toc.appendChild(fragment);
 })());
 
-/* Copy 平 to 上去入 */
+/* Add tables */
 
-document.querySelectorAll('table:not(.no-generate) tbody tr').forEach((tr) => {
-  const fragment = document.createDocumentFragment();
-  for (const 聲調 of '上去入') {
-    [...tr.getElementsByTagName('td')].forEach((td) => {
-      const new_td = document.createElement('td');
-      new_td.innerText = td.textContent.replace('平', 聲調);
-      fragment.appendChild(new_td);
-    });
-  }
-  tr.appendChild(fragment);
-});
+const 類型到母 = {
+  '一'  : '幫滂並明端透定泥見溪　疑精清從心　影曉匣　來　',
+  '二'  : '幫滂並明知徹澄孃見溪　疑莊初崇生　影曉匣　來　',
+  '假二': '　　　　　　　　　　　　莊初崇生俟　　　　　　',
+  '三'  : '幫滂並明知徹澄孃見溪羣疑章昌船書常影曉　云來日',
+  '假四': '幫滂並明　　　　見溪羣疑精清從心邪影曉　以　　',
+  '四'  : '幫滂並明端透定泥見溪　疑精清從心　影曉匣　來　',
+};
 
-/* Add spaces to title */
+const 開合皆有的韻 = '支脂微齊祭泰佳皆夬廢眞元寒刪山仙先歌麻陽唐庚耕清青蒸登';
 
-[...document.querySelectorAll('tbody tr:not(:last-child) th:last-of-type')].forEach((th) => {
-  if (th.textContent.length > 1) {
-    th.innerText = [...th.textContent].join(' ');
-  }
-});
+const 重紐母 = '幫滂並明見溪羣疑影曉';
+const 重紐韻 = '支脂祭眞仙宵清侵鹽';
 
-/* Convert 音韻地位 to 代表字 and add tooltip */
+const fragments = [...document.getElementsByClassName('template-data')];
 
-document.querySelectorAll('tbody td').forEach((td) => {
-  const 描述 = td.textContent.trim();
-
-  if (描述.length === 0) { // empty 音韻地位
-    td.innerText = '';
-    td.classList.add('empty-position');
-  } else {
-    const 音韻地位 = Qieyun.音韻地位.from描述(描述);
-    if (音韻地位.屬於('支脂之微魚虞模韻 入聲')) {
-      td.innerText = '';
-      td.classList.add('empty-position');
-    } else {
-      const 代表字 = 音韻地位.代表字;
-
-      let 提示;
-      if (代表字 == null) {
-        td.innerText = '';
-        提示 = '無 字';
+for (const fragment of fragments) {
+  const data = JSON.parse(fragment.innerHTML);
+  const table = document.getElementById('template-table').content.cloneNode(true).childNodes[0];
+  const trs = table.querySelectorAll('tr');
+  for (let i = 0; i < 23; i++) {
+    const tr = trs[i];
+    for (let j = 0; j < 16; j++) {
+      const td = document.createElement('td');
+      const 韻類型聲 = data[j];
+      if (韻類型聲 == null) {
+        td.classList.add('empty-position');
       } else {
-        const 小韻號 = sieuxyonh[音韻地位.編碼];
-        if (小韻號) {
-          const a = document.createElement('a');
-          a.innerText = 代表字;
-          a.href = `https://ytenx.org/kyonh/sieux/${小韻號}/`;
-          a.target = '_blank';
-          td.innerText = '';
-          td.appendChild(a);
+        const [韻, 類型, 聲, 開合1] = 韻類型聲;
+        const 母 = 類型到母[類型][i];
+        const 開合 = [...'幫滂並明'].includes(母) ? null : (開合1 || null);
+        const 重紐 = (![...重紐母].includes(母) || ![...重紐韻].includes(韻)) ? null : 類型 === '三' ? 'B' : 'A';
+        const 等 = {
+          '一': '一',
+          '二': '二',
+          '三': '三',
+          '四': '四',
+          '假二': '三',
+          '假四': '三',
+        }[類型];
+        if ( 母 === '　'
+          || [...開合皆有的韻].includes(韻) && [...'幫滂並明'].includes(母) && 開合1 === '合'
+          || 類型 == '假四' && ![...重紐韻].includes(韻) && [...重紐母].includes(母)
+        ) {
+          td.classList.add('empty-position');
         } else {
-          td.innerText = 代表字;
-        }
-        const 反切 = 音韻地位.反切(代表字);
-        提示 = [...(反切 == null ? '' : 反切 + '切')].join(' ');
-      }
+          const 音韻地位 = new Qieyun.音韻地位(母, 開合, 等, 重紐, 韻, 聲);
 
-      tippy(td, {
-        content: [...描述].join(' ') + '<br>' + 提示,
+          const 代表字 = 音韻地位.代表字;
+
+          let 提示;
+          if (代表字 == null) {
+            td.innerText = '';
+            提示 = '無 字';
+          } else {
+            const 小韻號 = sieuxyonh[音韻地位.編碼];
+            if (小韻號) {
+              const a = document.createElement('a');
+              a.innerText = 代表字;
+              a.href = `https://ytenx.org/kyonh/sieux/${小韻號}/`;
+              a.target = '_blank';
+              td.innerText = '';
+              td.appendChild(a);
+            } else {
+              td.innerText = 代表字;
+            }
+            const 反切 = 音韻地位.反切(代表字);
+            提示 = [...(反切 == null ? '' : 反切 + '切')].join(' ');
+          }
+
+          tippy(td, {
+            content: [...音韻地位.描述].join(' ') + '<br>' + 提示,
+            allowHTML: true,
+            placement: 'right',
+          });
+        }
+      }
+      tr.appendChild(td);
+    }
+  }
+
+  const tr = trs[23];
+  for (let j = 0; j < 16; j++) {
+    const th = document.createElement('th');
+    const 韻類型聲 = data[j];
+    if (韻類型聲 == null) {
+      //
+    } else {
+      const [韻, 類型, 聲, 開合1] = 韻類型聲;
+      th.innerText = yonh[韻 + 聲];
+
+      tippy(th, {
+        content: [...(類型[0] === '假' ? '三等' + 類型 : 類型)].join(' ') + ' 等',
         allowHTML: true,
         placement: 'right',
       });
     }
+    tr.appendChild(th);
   }
-});
+
+  document.body.replaceChild(table, fragment);
+}
